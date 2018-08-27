@@ -13,6 +13,7 @@
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="./layui/css/layui.css"  media="all">
         <script src="./js/url.js" charset="utf-8"></script>
+        <script src="./js/function.js" charset="utf-8"></script>
     </head>
     <body>
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
@@ -95,7 +96,22 @@
                     ,cols: [[
                         {field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
                         ,{field:'name', width:150, title: '咨询者名字',align:"center"}
-                        ,{field:'remark', title: '咨询内容'}
+                        ,{field:'academy', title:'院校', align:"center", templet:function (data) {
+                                return getAcademy(data.academy);
+                            }
+                        }
+                        ,{title:'所选专业', align:'center',templet:function (data) {
+                                return getProfession(data.profession);
+                            }
+                        }
+                        ,{title:'层次', align:'center',templet:function (data) {
+                                return getLevel(data.level);
+                            }
+                        }
+                        ,{title:'类型', align:'center', templet:function (data) {
+                                return getType(data.type);
+                            }
+                        }
                         ,{field:'state', title: '状态', templet:function (data) {
                                 if(data.state==0)
                                     return "未处理";
@@ -113,8 +129,8 @@
                                 }
                             }
                         }
-                        ,{field:'phoneNumber', width:150, title: '手机号码'}
-                        ,{field:'attribution', width:150, title: '归属地'}
+                        ,{field:'phoneNumber', width:100, title: '手机号码'}
+                        ,{field:'attribution', width:100, title: '归属地'}
                         ,{width:178, align:'center', toolbar: '#bar',title:'操作'}
                     ]]
                     ,limits:['10']

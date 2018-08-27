@@ -44,6 +44,10 @@
                 else
                     string+="<td class='td-status'><span class=\"layui-btn layui-btn-disabled layui-btn-mini\">不显示</span></td>";
 
+                if(data.url==null)
+                    data.url="";
+                string+="<td>"+data.url+"</td>";
+
                 string+= "<td class='td-manage'>";
 
                 if(data.visible==1)
@@ -52,6 +56,12 @@
                     string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onClick=\"banner_start(this,id)\" href=\"javascript:;\" title=\"显示\"><i class=\"layui-icon\">&#xe62f;</i></a>";
 
                 string+= "<a title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe640;</i></a>";
+                // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
+                //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
+                //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
+                string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteURL+data.path+"','"+data.url+"')\" " +
+                    "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
 
                 if(number!=0) {
                     string+="<a style=\"text-decoration:none\"  bannerId='"+data.id+"' onclick='banner_up(this)' href=\"javascript:;\" title=\"向上移动\"><i class=\"layui-icon\">&#xe619;</i></a>";
@@ -77,7 +87,7 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./banner-add.html',500,400)">
+            <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./banner-add.html',500,450)">
                 <i class="layui-icon">&#xe608;</i>添加轮播图
             </button>
             <table class="layui-table">
@@ -85,6 +95,7 @@
                     <tr>
                         <th>缩略图</th>
                         <th>状态</th>
+                        <th>链接地址</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -94,6 +105,7 @@
                         <td><img  src="./images/logo.png" width="100" alt="">点击图片试试</td>
                         <td>已显示</td>
                         <td>
+                            <a title="修改" bannerId="1" href="javascript:;" onclick="banner_edit(1,'111','1000')" style="text-decoration:none"><i class="layui-icon">&#xe642;</i></a>
                             <button class="layui-btn  layui-btn-mini layui-btn-mini" onclick="return ok();">更改显示状态</button>
                             <button class="layui-btn layui-btn-danger layui-btn-mini" onclick="delete();" >删除</button>
                         </td>
@@ -122,22 +134,6 @@
                         //,shift: 5 //0-6的选择，指定弹出图片动画类型，默认随机
                     });
                 });
-
-                // var uploadInst = upload.render({
-                //     elem:'#test1'
-                //     ,url:remoteURL+"/Banner/addBanner.do"
-                //     ,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
-                //         layer.load(); //上传loading
-                //     }
-                //     ,done:function(res) {
-                //         init();
-                //         layer.alert("上传成功");
-                //     }
-                //     ,error:function () {
-                //         //
-                //         layer.alert("上传失败");
-                //     }
-                // })
                 
             });
 
@@ -192,9 +188,9 @@
                 });
             }
             // 编辑
-            function banner_edit (title,url,id,w,h) {
-                x_admin_show(title,url,w,h); 
-            }
+            // function banner_edit (title,url,id,w,h) {
+            //     x_admin_show(title,url,w,h);
+            // }
             /*删除*/
             function banner_del(obj,id){
                 var bannerId=obj.getAttribute("bannerId");
@@ -208,6 +204,7 @@
                         success: function(data){
                             if(data==1){
                                 $(obj).parents("tr").remove();
+                                init();
                                 layer.msg('已删除!',{icon:1,time:1000});
                             } else {
                                 layer.msg("删除失败");
@@ -259,15 +256,34 @@
                     });
                 });
             }
+            function banner_edit(id,image,url) {
+                layui.use(['layer','form'],function () {
+                    var layer = layui.layer;
+                    layer.open({
+                        type:2,
+                        title:"修改轮播图",
+                        content:"./banner-edit.html",
+                        area:['500px','400px'],
+                        success:function (layero, index) {
+                            var body = layer.getChildFrame('body',index);
+                            var form = layui.form;
+                            body.find("#id").val(id);
+                            body.find("#image").attr("src",image);
+                            body.find("#url").val(url);
+                            form.render();
+                        }
+                    });
+                });
+            }
         </script>
-        <script>
-            var _hmt = _hmt || [];
-            (function() {
-              var hm = document.createElement("script");
-              hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-              var s = document.getElementsByTagName("script")[0];
-              s.parentNode.insertBefore(hm, s);
-            })();
-        </script>
+        <!--<script>-->
+            <!--var _hmt = _hmt || [];-->
+            <!--(function() {-->
+              <!--var hm = document.createElement("script");-->
+              <!--hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";-->
+              <!--var s = document.getElementsByTagName("script")[0];-->
+              <!--s.parentNode.insertBefore(hm, s);-->
+            <!--})();-->
+        <!--</script>-->
     </body>
 </html>

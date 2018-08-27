@@ -33,6 +33,14 @@
     </div>
     <div class="layui-form-item">
         <div class="layui-inline">
+            <label class="layui-form-label" style="width:100px">图片</label>
+            <div class="layui-input-inline">
+                <img id="image" src="" width="200px;">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">链接地址</label>
             <div class="layui-input-inline">
                 <input id="name" type="text" name="url" autocomplete="off" class="layui-input">
@@ -74,6 +82,7 @@
                 console.log(res);
                 $("#path").val(res.data.path);
                 $("#type").val(res.data.type);
+                document.getElementById("image").src=remoteURL+res.data.path;
                 layer.alert("上传成功");
             }
             ,error:function () {
