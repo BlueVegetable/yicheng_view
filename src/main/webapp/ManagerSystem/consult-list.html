@@ -26,9 +26,9 @@
                 <div class="layui-inline">
                     <div class="layui-input-inline">
                         <xblock>
-                            <button class="layui-btn" onclick="consult_add('添加咨询条目','consult-add.html','600','500')">
-                                <i class="layui-icon">&#xe608;</i>添加
-                            </button>
+                            <!--<button class="layui-btn" onclick="consult_add('添加咨询条目','consult-add.html','600','500')">-->
+                                <!--<i class="layui-icon">&#xe608;</i>添加-->
+                            <!--</button>-->
                             <span class="x-right" style="line-height:40px"></span>
                         </xblock>
                     </div>
@@ -51,9 +51,7 @@
                     </div>
                 </div>
                 <div class="layui-inline">
-                    <div class="layui-input-inline">
-                        <button class="layui-btn" data-type="reload" id="select"><i class="layui-icon">&#xe615;</i></button>
-                    </div>
+                    <button class="layui-btn" data-type="reload" id="select"><i class="layui-icon">&#xe615;</i></button>
                 </div>
             </div>
         </div>
@@ -101,7 +99,9 @@
                             }
                         }
                         ,{title:'所选专业', align:'center',templet:function (data) {
-                                return getProfession(data.profession);
+                                if(data.academy==null||data.profession==null)
+                                    return "";
+                                return getProfession(data.academy,data.profession);
                             }
                         }
                         ,{title:'层次', align:'center',templet:function (data) {

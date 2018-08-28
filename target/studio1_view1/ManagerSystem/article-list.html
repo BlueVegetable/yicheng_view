@@ -58,8 +58,11 @@
 
         table.render({
             elem: '#article-list'
-            ,url:remoteURL+"/article/getAllArticles.do?token="+token
+            ,url:remoteURL+"/article/getAllArticles.do"
             ,page:true
+            ,where:{
+                token:token
+            }
             ,cols: [[
                 {field:'id', title: 'ID',align:"center", sort: true}
                 ,{field:'title', title: '文章名',align:"center"}
