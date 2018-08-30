@@ -54,6 +54,7 @@
     layui.use(['element','layer','table'], function(){
         var table=layui.table;
         var layer=layui.layer;
+        // var element=layui.element;
         var token = sessionStorage.getItem("token");
 
         table.render({
@@ -85,54 +86,33 @@
             var tr = obj.tr; //获得当前行 tr 的DOM对象
 
             if(layEvent === 'detail'){ //查看
-                layer.msg(data.id + "的查看操作");
+                // layer.msg(data.id + "的查看操作");
+                window.open("./article-show.html?articleID="+data.id);
                 //do somehing
             } else if(layEvent === 'del'){ //删除
                 layer.confirm('真的删除行么', function(index){
+                    //向服务端发送删除指令
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/article/deleteArticle.do",
-                        data: {adminID:data.id},
+                        url:  remoteURL+"/article/deleteArticle.do?token="+sessionStorage.getItem("token"),
+                        data: {articleID:data.id},
                         dataType: "json",
                         success: function(res){
                             if(res.code==0) {
                                 layer.msg("删除成功");
                                 obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
                                 layer.close(index);
-                            } else {
-                                layer.msg(res.msg);
                             }
+                            else
+                                layer.alert(res.msg);
                         }
                     });
-
-                    //向服务端发送删除指令
                 });
             } else if(layEvent === 'edit'){ //编辑
-                //do something
-                layer.open({
-                    type:2
-                    ,title:"修改管理员信息"
-                    ,content:"./admin-edit.html"
-                    ,area:['460px','480px']
-                    // ,btn:['确定','取消']
-                    ,success:function (layero, index) {
-                        var body = layer.getChildFrame('body',index);
-                        var form = layui.form;
-                        if(data) {
-                            body.find("#id").val(data.id);
-                            body.find("#name").val(data.name);
-                            body.find("#password").val();
-                            body.find("#re_password").val();
-                            body.find("#flag").attr("name",$("#flag").attr("name"))
-                        }
-                    }
-                });
-
-                //同步更新缓存对应的值
-                obj.update({
-                    // username: '123'
-                    // ,title: 'xxx
-                });
+                console.log(data);
+                var tab = parent.document.getElementById("article_edit");
+                tab.setAttribute("_href","./article-edit.html?articleID="+data.id);
+                tab.click();
             }
         });
 
@@ -161,8 +141,8 @@
     });
 </script>
 <script type="text/html" id="bar">
-    <!--<a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>-->
-    <a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>
+    <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>
+    <!--<a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>-->
     <a class="layui-btn layui-btn-xs " lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
 

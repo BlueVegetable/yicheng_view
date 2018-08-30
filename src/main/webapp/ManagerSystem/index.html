@@ -17,6 +17,10 @@
         <script>
             if(sessionStorage.getItem("token")==null)
                 window.location.href="./login.html";
+            window.onload=function () {
+                if(sessionStorage.getItem("token")==null)
+                    window.location.href="./login.html";
+            }
         </script>
     </head>
     <body>
@@ -101,6 +105,15 @@
                                 </dd>
                                 </dd>
                             </dl>
+                            <dl class="layui-nav-child" style="display: none;">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./article-edit.html" id="article_edit">
+                                        <cite>修改文章</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
                         </li>
 
                         <li class="layui-nav-item">
@@ -171,13 +184,13 @@
             </div>
             <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true">
                 <div class="x-slide_left"></div>
-                <ul class="layui-tab-title">
+                <ul class="layui-tab-title" id="tab">
                     <li class="layui-this">
                         我的桌面
                         <i class="layui-icon layui-unselect layui-tab-close">ဆ</i>
                     </li>
                 </ul>
-                <div class="layui-tab-content site-demo site-demo-body">
+                <div class="layui-tab-content site-demo site-demo-body" id="tab_content">
                     <div class="layui-tab-item layui-show">
                         <iframe frameborder="0" src="./welcome.html" class="x-iframe"></iframe>
                     </div>
@@ -188,14 +201,5 @@
         </div>
         <script src="./lib/layui/layui.js" charset="utf-8"></script>
         <script src="./js/x-admin.js"></script>
-        <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
-        })();
-        </script>
     </body>
 </html>

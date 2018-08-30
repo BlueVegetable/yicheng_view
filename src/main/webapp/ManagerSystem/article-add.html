@@ -68,30 +68,30 @@
         form.render();
 
         form.on('submit(demo1)', function(data){
-            data.field.content=getAllHtml();
-            data.field.token=sessionStorage.getItem("token");
-            // layer.alert(JSON.stringify(data.field), {
-            //     title: '最终的提交信息'
-            // });
+            data.field.content=getContent();
+            var token=sessionStorage.getItem("token");
+            console.log(JSON.stringify(data.field));
             $.ajax({
                 type: "POST",
-                url:  remoteURL+"/article/addArticle.do",
+                url:  remoteURL+"/article/addArticle.do?token="+token,
                 contentType:"application/json;charset=utf-8",
                 data: JSON.stringify(data.field),
                 dataType: "json",
                 success: function(res){
-                    if(res.code==0)
-                        layer.alert("添加成功");
+                    if(res.code==0) {
+                        layer.alert("添加成功" ,function () {
+                            location.reload();
+                        });
+                    }
                     else
-                        layer.alert("添加失败");
+                        layer.alert(res.msg);
                 }
             });
             return false;
         });
     });
-    function getAllHtml() {
-        // alert(UE.getEditor('container').getAllHtml());
-        return UE.getEditor('container').getAllHtml();
+    function getContent() {
+        return UE.getEditor('container').getContent();
     }
 </script>
 </html>
