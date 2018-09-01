@@ -38,7 +38,7 @@
                 console.log(data);
                 var string="";
                 string+="<tr>"+
-                    "<td>"+"<img  src="+remoteURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
+                    "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
                 if(data.visible==1)
                     string+="<td class='td-status'><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>";
                 else
@@ -60,7 +60,7 @@
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
                 string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteURL+data.path+"','"+data.url+"')\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"')\" " +
                     "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
 
                 if(number!=0) {

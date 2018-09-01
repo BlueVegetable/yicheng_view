@@ -82,7 +82,7 @@
                 console.log(res);
                 $("#path").val(res.data.path);
                 $("#type").val(res.data.type);
-                document.getElementById("image").src=remoteURL+res.data.path;
+                document.getElementById("image").src=remoteImageURL+res.data.path;
                 layer.alert("上传成功");
             }
             ,error:function () {
