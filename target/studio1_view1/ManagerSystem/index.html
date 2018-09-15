@@ -13,6 +13,10 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="format-detection" content="telephone=no">
         <link rel="stylesheet" href="./css/x-admin.css" media="all">
+        <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/url.js"></script>
 
         <script>
             if(sessionStorage.getItem("token")==null)
@@ -20,6 +24,20 @@
             window.onload=function () {
                 if(sessionStorage.getItem("token")==null)
                     window.location.href="./login.html";
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/Consult/countUnDealing.do",
+                    data: {},
+                    dataType: "json",
+                    success: function(res){
+                        if(res != 0) {
+                            $("#smallBadge").html(res);
+                        } else {
+                            $("#bigBadge").hide();
+                            $("#smallBadge").hide();
+                        }
+                    }
+                });
             }
         </script>
     </head>
@@ -70,13 +88,13 @@
 
                         <li class="layui-nav-item">
                             <a class="javascript:;" href="javascript:;">
-                                <i class="layui-icon" style="top: 3px;">&#xe606;</i><cite>咨询管理</cite>
+                                <i class="layui-icon" style="top: 3px;">&#xe606;</i><cite>咨询管理 </cite><span id="bigBadge" class="layui-badge-dot"></span>
                             </a>
                             <dl class="layui-nav-child">
                                 <dd class="">
                                     <dd class="">
                                         <a href="javascript:;" _href="./consult-list.html">
-                                            <cite>咨询列表</cite>
+                                            <cite>咨询列表</cite> <span id="smallBadge" class="layui-badge">1</span>
                                         </a>
                                     </dd>
                                 </dd>

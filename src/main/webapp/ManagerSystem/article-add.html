@@ -17,6 +17,25 @@
         <script src="./js/jquery-3.1.1.min.js"></script>
         <script src="./layui/layui.js" charset="utf-8"></script>
         <script src="./js/x-layui.js" charset="utf-8"></script>
+
+        <script>
+            $.ajax({
+                type: "POST",
+                url:  remoteURL+"/articleType/getAllArticleTypes.do",
+                data: {},
+                dataType: "json",
+                success: function(res){
+                    $("#type").html("");
+                    for (var i = 0; i < res.length; i++) {
+                        $("#type").append("<option value='"+res[i].id+"'>"+res[i].type+"</option>");
+                    }
+                    layui.use('form',function () {
+                        var form = layui.form;
+                        form.render();
+                    });
+                }
+            });
+        </script>
     </head>
     <body>
     <div class="x-nav">
@@ -39,8 +58,9 @@
                     </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">文章类型</label>
-                        <div class="layui-input-inline">
-                            <input type="text" name="type" lay-verify="required" autocomplete="off" class="layui-input">
+                        <div class="layui-input-inline" style="z-index: 10;">
+                            <select id="type" name="type" lay-verify="required" lay-search="" style="z–index:10">
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -57,8 +77,8 @@
                     </script>
                 </div>
                 <div class="layui-form-item" style="text-align: center">
-                    <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
-                    <a class="layui-btn layui-btn-normal" onclick="location.reload()">重置</a>
+                    <button class="layui-btn" lay-submit="" lay-filter="demo1"><i class="layui-icon">&#xe61f;</i>立即提交</button>
+                    <a class="layui-btn layui-btn-normal" onclick="location.reload()"><i class="layui-icon">&#xe669;</i>重置</a>
                 </div>
             </div>
         </div>
