@@ -90,12 +90,13 @@
 
                 table.render({
                     elem: '#consult-list'
-                    ,url:remoteURL+"/Consult/getConsults.do"
+                    ,url:remoteURL+"/Consult/getConsults.do?applyMethod=0"
                     ,page:true
                     ,cols: [[
                         // {field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
                         {field:'name', width:120, title: '咨询者名字',align:"center"}
                         ,{field:'academy', width:135, title:'院校', align:"center", templet:function (data) {
+                                console.log(data);
                                 return getAcademy(data.academy);
                             }
                         }
@@ -126,7 +127,7 @@
                                     return "无数据";
                                 else {
                                     var date=new Date(createTime);
-                                    return date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日";
+                                    return date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日";
                                 }
                             }
                         }
@@ -180,22 +181,19 @@
                                     var thisTable=layui.table;
                                     thisTable.reload('consult-list', {
                                         url: remoteURL+"/Consult/getConsultsLimit.do"
+                                        ,where: {
+                                            applyMethod:0
+                                        }
                                     });
                                     $.ajax({
                                         type: "POST",
                                         url:  remoteURL+"/Consult/countUnDealing.do",
-                                        data: {},
+                                        data: {applyMethod:0},
                                         dataType: "json",
                                         success: function(res){
-                                            if(res != 0) {
-                                                parent.document.getElementById("smallBadge").innerHTML=res;
-                                            } else {
-                                                parent.document.getElementById("bigBadge").style.display="none";
-                                                parent.document.getElementById("smallBadge").style.display="none";
-                                            }
+                                            parent.initBadge(res);
                                         }
                                     });
-                                    alert(bigBadge);
                                 }
                                 else
                                     layer.msg('确认失败');
@@ -246,6 +244,7 @@
                                 curr: 1 //重新从第 1 页开始
                             }
                             ,where: {
+                                applyMethod:0,
                                 name:nameReload.val(),
                                 phoneNumber:phoneNumber.val(),
                                 createTime:createTimeReload.val()

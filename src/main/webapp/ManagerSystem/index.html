@@ -27,15 +27,10 @@
                 $.ajax({
                     type: "POST",
                     url:  remoteURL+"/Consult/countUnDealing.do",
-                    data: {},
+                    data: {applyMethod:0},
                     dataType: "json",
                     success: function(res){
-                        if(res != 0) {
-                            $("#smallBadge").html(res);
-                        } else {
-                            $("#bigBadge").hide();
-                            $("#smallBadge").hide();
-                        }
+                        initBadge(res);
                     }
                 });
             }
@@ -94,9 +89,27 @@
                                 <dd class="">
                                     <dd class="">
                                         <a href="javascript:;" _href="./consult-list.html">
-                                            <cite>咨询列表</cite> <span id="smallBadge" class="layui-badge">1</span>
+                                            <cite>咨询列表</cite> <span id="smallBadge1" class="layui-badge">1</span>
                                         </a>
                                     </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-college-list.html">
+                                        <cite>开放大学咨询列表</cite> <span id="smallBadge2" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-residence-list.html">
+                                        <cite>申请入户列表</cite> <span id="smallBadge3" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
                                 </dd>
                             </dl>
                         </li>
@@ -220,4 +233,75 @@
         <script src="./lib/layui/layui.js" charset="utf-8"></script>
         <script src="./js/x-admin.js"></script>
     </body>
+<script>
+    function initBadge(res){
+        $("#bigBadge").show();
+        $("#smallBadge1").show();
+        $("#smallBadge2").show();
+        $("#smallBadge3").show();
+        if(res.length==0) {
+            $("#bigBadge").hide();
+        }
+        res=putAllBadge(res);
+        for(var i=0;i<res.length;i++) {
+            initOneBadge(res[i]);
+        }
+    }
+    function initOneBadge(data) {
+        switch (data.applyMethod) {
+            case 0:
+                if(data.number==0)
+                    $("#smallBadge1").hide();
+                else
+                    $("#smallBadge1").html(data.number);
+                break;
+            case 2:
+                if(data.number==0)
+                    $("#smallBadge2").hide();
+                else
+                    $("#smallBadge2").html(data.number);
+                break;
+            case 3:
+                if(data.number==0)
+                    $("#smallBadge3").hide();
+                else
+                    $("#smallBadge3").html(data.number);
+                break;
+        }
+    }
+    function putAllBadge(data) {
+        if(data.length==0) {
+            data.push(getInfoObject(0));
+            data.push(getInfoObject(2));
+            data.push(getInfoObject(3));
+        }
+        if(data.length==1) {
+            if (data[0].applyMethod == 0) {
+                data.push(getInfoObject(2));
+                data.push(getInfoObject(3));
+            } else if (data[0].applyMethod == 2) {
+                data.push(getInfoObject(0));
+                data.push(getInfoObject(3));
+            } else if (data[0].applyMethod == 3) {
+                data.push(getInfoObject(0));
+                data.push(getInfoObject(2));
+            }
+        }
+        if(data.length==2) {
+            if(data[0].applyMethod != 0 && data[1].applyMethod != 0)
+                data.push(getInfoObject(0));
+            if(data[0].applyMethod != 2 && data[1].applyMethod != 2)
+                data.push(getInfoObject(2));
+            if(data[0].applyMethod != 3 && data[1].applyMethod != 3)
+                data.push(getInfoObject(3));
+        }
+        return data;
+    }
+    function getInfoObject(applyMethod) {
+        var object = new Object();
+        object.applyMethod = applyMethod;
+        object.number=0;
+        return object;
+    }
+</script>
 </html>
