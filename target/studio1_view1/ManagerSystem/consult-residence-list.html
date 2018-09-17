@@ -100,6 +100,11 @@
                                 return getAge(data.age);
                             }
                         }
+                        ,{width:135, title:'当前学历', align:"center", templet:function (data) {
+                                console.log(data);
+                                return getCurrentEducation(data.currentEducation);
+                            }
+                        }
                         ,{title:'社保年限', align:'center',templet:function (data) {
                                 return getSecurityTime(data.securityTime);
                             }
@@ -265,12 +270,32 @@
     function getAge(age) {
         if(age==null)
             return "";
-        return age;
+        switch (age) {
+            case 0:return "18-48岁";
+            case 1:return "48岁以上";
+            default:return "";
+        }
+    }
+    function getCurrentEducation(education) {
+        if(education==null)
+            return "";
+        switch (education) {
+            case 0:return "初中及以下";
+            case 1:return "高中(中专、职高、技校)";
+            default:return "";
+        }
     }
     function getSecurityTime(securityTime) {
         if(securityTime==null)
             return "";
-        return securityTime;
+        switch (securityTime) {
+            case 0:return "1年以下";
+            case 1:return "1年";
+            case 2:return "2年";
+            case 3:return "3年";
+            case 4:return "4年以上";
+            default:return "";
+        }
     }
 </script>
 </html>
