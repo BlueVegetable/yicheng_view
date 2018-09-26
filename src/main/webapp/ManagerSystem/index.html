@@ -112,6 +112,24 @@
                                 </dd>
                                 </dd>
                             </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-work-list.html">
+                                        <cite>劳动查询</cite> <span id="smallBadge4" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-work-simple-list.html">
+                                        <cite>劳动报名</cite> <span id="smallBadge5" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
                         </li>
 
                         <li class="layui-nav-item">
@@ -236,72 +254,25 @@
 <script>
     function initBadge(res){
         $("#bigBadge").show();
-        $("#smallBadge1").show();
-        $("#smallBadge2").show();
-        $("#smallBadge3").show();
-        if(res.length==0) {
+
+        var smallBadges = document.getElementsByClassName("layui-badge");
+        for (var i = 1; i <= smallBadges.length; i++) {
+            $("#smallBadge"+i).show();
+        }
+        if(res.count==0) {
             $("#bigBadge").hide();
         }
-        res=putAllBadge(res);
-        for(var i=0;i<res.length;i++) {
-            initOneBadge(res[i]);
+        for(var i=0;i<res.data.length;i++) {
+            initOneBadge(res.data[i]);
         }
     }
     function initOneBadge(data) {
-        switch (data.applyMethod) {
-            case 0:
-                if(data.number==0)
-                    $("#smallBadge1").hide();
-                else
-                    $("#smallBadge1").html(data.number);
-                break;
-            case 2:
-                if(data.number==0)
-                    $("#smallBadge2").hide();
-                else
-                    $("#smallBadge2").html(data.number);
-                break;
-            case 3:
-                if(data.number==0)
-                    $("#smallBadge3").hide();
-                else
-                    $("#smallBadge3").html(data.number);
-                break;
-        }
-    }
-    function putAllBadge(data) {
-        if(data.length==0) {
-            data.push(getInfoObject(0));
-            data.push(getInfoObject(2));
-            data.push(getInfoObject(3));
-        }
-        if(data.length==1) {
-            if (data[0].applyMethod == 0) {
-                data.push(getInfoObject(2));
-                data.push(getInfoObject(3));
-            } else if (data[0].applyMethod == 2) {
-                data.push(getInfoObject(0));
-                data.push(getInfoObject(3));
-            } else if (data[0].applyMethod == 3) {
-                data.push(getInfoObject(0));
-                data.push(getInfoObject(2));
-            }
-        }
-        if(data.length==2) {
-            if(data[0].applyMethod != 0 && data[1].applyMethod != 0)
-                data.push(getInfoObject(0));
-            if(data[0].applyMethod != 2 && data[1].applyMethod != 2)
-                data.push(getInfoObject(2));
-            if(data[0].applyMethod != 3 && data[1].applyMethod != 3)
-                data.push(getInfoObject(3));
-        }
-        return data;
-    }
-    function getInfoObject(applyMethod) {
-        var object = new Object();
-        object.applyMethod = applyMethod;
-        object.number=0;
-        return object;
+        if(document.getElementById("smallBadge"+data.applyMethod)==null)
+            return ;
+        if(data.number==0)
+            $("#smallBadge"+data.applyMethod).hide();
+        else
+            $("#smallBadge"+data.applyMethod).html(data.number);
     }
 </script>
 </html>
