@@ -89,8 +89,8 @@
                     ,page:true
                     ,cols: [[
                         // {field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
-                        // {field:'name', width:120, title: '咨询者名字',align:"center"}
-                        {width:135, title:'年龄段', align:"center", templet:function (data) {
+                        {field:'name', width:120, title: '咨询者名字',align:"center"}
+                        ,{width:135, title:'年龄段', align:"center", templet:function (data) {
                                 console.log(data);
                                 return getAge(data.age);
                             }

@@ -7,15 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ab847e2-8c7c-4291-ba93-462fa7ff8f66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-simple-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-statistics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/echarts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-work-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-work-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/url.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yicheng_view.war" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,33 +27,35 @@
     <session id="140558466">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="48" />
+          <entry key="project.closed" value="54" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="9" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.3" value="8" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="2" />
-          <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.52" value="3" />
           <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="49" />
+          <entry key="project.opened" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="8175" />
+          <entry key="html" value="8411" />
           <entry key="js" value="1468" />
           <entry key="json" value="39" />
           <entry key="xml" value="3" />
@@ -63,7 +63,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="8175" />
+          <entry key="HTML" value="8411" />
           <entry key="JSON" value="39" />
           <entry key="JavaScript" value="1468" />
           <entry key="XML" value="3" />
@@ -71,8 +71,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="88" />
-          <entry key="js" value="34" />
+          <entry key="html" value="92" />
+          <entry key="js" value="36" />
           <entry key="json" value="4" />
           <entry key="jsp" value="3" />
           <entry key="rnc" value="3" />
@@ -81,10 +81,10 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="88" />
+          <entry key="HTML" value="92" />
           <entry key="JSON" value="4" />
           <entry key="JSP" value="3" />
-          <entry key="JavaScript" value="34" />
+          <entry key="JavaScript" value="36" />
           <entry key="RNG Compact" value="3" />
           <entry key="XML" value="2" />
         </counts>
@@ -98,24 +98,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-statistics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3200">
-              <caret line="160" column="33" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
+            <state relative-caret-position="280">
+              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="4" selection-end-column="50" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,26 +112,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="270" column="20" selection-start-line="270" selection-start-column="20" selection-end-line="270" selection-end-column="20" />
+            <state relative-caret-position="287">
+              <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-list.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-simple-list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="21" />
+            <state relative-caret-position="260">
+              <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -213,11 +195,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/welcome.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/virt-index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/virt-welcome.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-simple-list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-list.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-statistics.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" />
       </list>
     </option>
   </component>
@@ -257,7 +240,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="354" />
     <option name="y" value="96" />
     <option name="width" value="817" />
@@ -325,7 +308,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537970136709" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538912757032" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -336,6 +319,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem\js" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\后台管理系统" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\WEB-INF\lib" />
@@ -490,18 +474,23 @@
       <workItem from="1537500328395" duration="66000" />
       <workItem from="1537968110841" duration="2430000" />
       <workItem from="1537971073378" duration="16000" />
-      <workItem from="1537975661388" duration="1388000" />
+      <workItem from="1537975661388" duration="1536000" />
+      <workItem from="1537979762688" duration="124000" />
+      <workItem from="1538061111215" duration="47000" />
+      <workItem from="1538270457692" duration="788000" />
+      <workItem from="1538271781297" duration="21000" />
+      <workItem from="1538905787611" duration="4165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122872000" />
+    <option name="totallyTimeSpent" value="128165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2219697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23030303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -511,7 +500,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.14650767" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" visible="true" weight="0.18568996" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924242" weight="0.22487223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -542,8 +531,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/consult-add.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/article-edit.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-add.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/后台管理系统/banner-list.html" />
@@ -675,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="74" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -734,23 +714,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/virt-welcome.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/virt-index.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3200">
-          <caret line="160" column="33" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="1800">
+          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -761,17 +728,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="270" column="20" selection-start-line="270" selection-start-column="20" selection-end-line="270" selection-end-column="20" />
+        <state>
+          <caret column="48" lean-forward="true" selection-start-column="48" selection-end-line="1" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-list.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-work-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        <state relative-caret-position="-120">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="21" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/consult-statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="136" column="53" selection-start-line="136" selection-start-column="53" selection-end-line="136" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
