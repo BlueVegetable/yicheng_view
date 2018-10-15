@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: junit:junit:4.12">
+    <archive path="D:/Application/IDEA/Resposity/junit/junit/4.12/junit-4.12.jar" />
+  </library>
+  <library name="Maven: org.hamcrest:hamcrest-core:1.3">
+    <archive path="D:/Application/IDEA/Resposity/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+  </library>
+  <library name="lib" />
+</eclipse-userlibraries>
+
