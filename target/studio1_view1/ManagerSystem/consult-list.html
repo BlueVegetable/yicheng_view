@@ -70,7 +70,7 @@
         <script type="text/html" id="bar">
             <!--<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>-->
             <!--<button class="layui-btn layui-btn-xs" lay-event="edit" >编辑</button>-->
-            <!--<button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>-->
+            <button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</button>
             {{# if(d.state == 0){}}
             <button class="layui-btn layui-btn-danger layui-btn-xs" lay-event="confirm">确认处理</button>
             {{# } else { }}
@@ -133,7 +133,7 @@
                         }
                         ,{field:'phoneNumber', width:120, title: '手机号码'}
                         ,{field:'attribution', width:120, title: '归属地'}
-                        ,{align:'center', toolbar: '#bar',title:'操作'}
+                        ,{align:'center',width:140, toolbar: '#bar',title:'操作'}
                     ]]
                     ,limits:['10']
                 });
