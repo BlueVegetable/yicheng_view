@@ -18,7 +18,7 @@
     </head>
     <body>
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>首页 / 咨询管理 / 申报入户列表</legend>
+            <legend>首页 / 咨询管理 / 首页咨询列表</legend>
         </fieldset>
 
 
@@ -90,23 +90,18 @@
 
                 table.render({
                     elem: '#consult-list'
-                    ,url:remoteURL+"/Consult/getConsults.do?applyMethod=3"
+                    ,url:remoteURL+"/Consult/getConsults.do?applyMethod=7"
                     ,page:true
                     ,cols: [[
                         // {field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
                         {field:'name', width:120, title: '咨询者名字',align:"center"}
-                        ,{width:135, title:'年龄段', align:"center", templet:function (data) {
-                                console.log(data);
-                                return getAge(data.age);
-                            }
-                        }
-                        ,{width:135, title:'当前学历', align:"center", templet:function (data) {
+                        ,{width:135, title:'学历层次', align:"center", templet:function (data) {
                                 console.log(data);
                                 return getCurrentEducation(data.currentEducation);
                             }
                         }
-                        ,{title:'社保年限', align:'center',templet:function (data) {
-                                return getSecurityTime(data.securityTime);
+                        ,{title:'专业课程', align:'center',templet:function (data) {
+                                return getSecurityTime(data.profession);
                             }
                         }
                         ,{field:'state', title: '状态', align:"center", templet:function (data) {
@@ -177,13 +172,13 @@
                                     thisTable.reload('consult-list', {
                                         url: remoteURL+"/Consult/getConsultsLimit.do"
                                         ,where: {
-                                            applyMethod:3
+                                            applyMethod:7
                                         }
                                     });
                                     $.ajax({
                                         type: "POST",
                                         url:  remoteURL+"/Consult/countUnDealing.do",
-                                        data: {applyMethod:3},
+                                        data: {applyMethod:7},
                                         dataType: "json",
                                         success: function(res){
                                             parent.initBadge(res);
@@ -239,7 +234,7 @@
                                 curr: 1 //重新从第 1 页开始
                             }
                             ,where: {
-                                applyMethod:3,
+                                applyMethod:7,
                                 name:nameReload.val(),
                                 phoneNumber:phoneNumber.val(),
                                 createTime:createTimeReload.val()
