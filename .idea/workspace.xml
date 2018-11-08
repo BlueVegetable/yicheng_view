@@ -97,32 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-add.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+            <state relative-caret-position="190">
+              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -244,10 +223,10 @@
   <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="354" />
     <option name="y" value="96" />
-    <option name="width" value="817" />
-    <option name="height" value="503" />
+    <option name="width" value="819" />
+    <option name="height" value="504" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -259,39 +238,43 @@
         <subPane>
           <expand>
             <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yicheng_view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yicheng_view" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yicheng_view" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yicheng_view" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yicheng_view" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="ManagerSystem" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yicheng_view" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yicheng_view" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
           </expand>
           <select />
@@ -299,6 +282,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -577,10 +561,9 @@
     <option name="totallyTimeSpent" value="151222000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26439393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24413905" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -858,11 +841,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state relative-caret-position="190">
+          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
         </state>
       </provider>
     </entry>
