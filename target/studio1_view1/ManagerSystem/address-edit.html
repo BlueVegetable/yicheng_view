@@ -21,6 +21,7 @@
 </fieldset>
 
 <form class="layui-form">
+    <input class="hidden" id="id" name="id" value="" />
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">校区所在地</label>
@@ -83,7 +84,6 @@
         });
 
         form.on('submit(submit)', function(data) {
-            delete data.field.re_password;
             $.ajax({
                 type: "POST",
                 url:  remoteURL+"/address/updateAddress.do",
