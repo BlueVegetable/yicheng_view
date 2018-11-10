@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="yicheng_view:war">
     <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="studio1_view1.war">
+    <root id="archive" name="yicheng_view.war">
       <element id="artifact" artifact-name="yicheng_view:war exploded" />
     </root>
   </artifact>

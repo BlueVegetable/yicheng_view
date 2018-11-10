@@ -71,7 +71,7 @@
                     if(res.code==0) {
                         layer.alert("修改成功", {icon: 6},function () {
                             var table=parent.layui.table;
-                            table.reload('admin-list', {
+                            table.reload('article-list', {
                                 url:remoteURL+"/articleType/getAllArticleTypes.do"
                             });
                             // 获得frame索引
