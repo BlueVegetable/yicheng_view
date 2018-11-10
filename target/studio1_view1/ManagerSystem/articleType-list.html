@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        文章列表
+        文章类型列表
     </title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,7 +18,7 @@
 <body>
 <div class="x-nav">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-        <legend>首页 / 文章管理 / 文章列表</legend>
+        <legend>首页 / 文章类型管理 / 文章类型列表</legend>
     </fieldset>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:35px">&#xe9aa;</i>
@@ -26,16 +26,13 @@
 </div>
 
 <div class="x-body">
-    <!--<xblock>-->
-        <!--<button class="layui-btn" onclick="admin_add('添加管理员','./admin-add.html',460,430)">-->
-            <!--<i class="layui-icon">&#xe608;</i>-->
-            <!--添加-->
-        <!--</button>-->
-        <!--<span class="x-right" style="line-height:40px"></span>-->
-    <!--</xblock>-->
-    <!--<div style="display: none">-->
-        <!--<div id="flag" name=""></div>-->
-    <!--</div>-->
+    <xblock>
+        <button class="layui-btn" onclick="admin_add('添加文章类型','./articleType-add.html',460,430)">
+            <i class="layui-icon">&#xe608;</i>
+            添加
+        </button>
+        <span class="x-right" style="line-height:40px"></span>
+    </xblock>
     <div class="layui-form-item" style="text-align: center">
         <!--<div class="layui-inline">-->
             <!--<div class="layui-input-inline">-->
@@ -59,41 +56,31 @@
 
         table.render({
             elem: '#article-list'
-            ,url:remoteURL+"/article/getAllArticles.do"
-            ,page:true
+            ,url:remoteURL+"/articleType/getAllArticleTypes.do"
             ,where:{
                 token:token
             }
             ,cols: [[
                 {field:'id', title: 'ID',align:"center", sort: true}
-                ,{field:'title', title: '文章名',align:"center"}
-                ,{field:'typeID', title: '文章类型',templet:function (data) {
+                ,{field:'type', title: '类型名',align:"center"}
+                ,{field:'moduleID', title: '类型模块',templet:function (data) {
                         var result = "";
                         $.ajax({
                             type: "POST",
-                            url:  remoteURL+"/articleType/getArticleTypeByTypeID.do",
-                            data: {typeID:data.typeID},
+                            url:  remoteURL+"/module/getModuleByID.do",
+                            data: {moduleID:data.moduleID},
                             dataType: "json",
                             async: false,
                             success: function(res){
-                                console.log(res.data);
                                 if(res.code == 0)
-                                    result = res.data;
+                                    result = res.data.moduleName;
                             }
                         });
                         return result;
                     }
                 }
-                ,{field:'lastModify', title: '最后修改时间', templet:function (data) {
-                        var date = new Date(data.lastModify);
-                        return date.getFullYear()+"年"+(date.getMonth()+1)+"月"
-                            +date.getDate()+"日"+"   "+date.getHours()+"时"
-                            +date.getMinutes()+"分"+date.getSeconds()+"秒";
-                    }
-                }
                 ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}
             ]]
-            ,limits:['10']
         });
 
         table.on('tool(bar)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
@@ -106,12 +93,12 @@
                 window.open("./article-show.html?articleID="+data.id);
                 //do somehing
             } else if(layEvent === 'del'){ //删除
-                layer.confirm('真的删除行么', function(index){
+                layer.confirm('如果类型删除，则该类型下的所有文章都会删除，是否继续?', function(index){
                     //向服务端发送删除指令
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/article/deleteArticle.do?token="+sessionStorage.getItem("token"),
-                        data: {articleID:data.id},
+                        url:  remoteURL+"/articleType/deleteArticleType.do?token="+sessionStorage.getItem("token"),
+                        data: {articleTypeID:data.id},
                         dataType: "json",
                         success: function(res){
                             if(res.code==0) {
@@ -125,10 +112,20 @@
                     });
                 });
             } else if(layEvent === 'edit'){ //编辑
-                console.log(data);
-                var tab = parent.document.getElementById("article_edit");
-                tab.setAttribute("_href","./article-edit.html?articleID="+data.id);
-                tab.click();
+                layer.open({
+                    type:2,
+                    title:"修改类型名称",
+                    content:"./articleType-edit.html",
+                    area:['460px','400px'],
+                    success:function (layero, index) {
+                        var body = layer.getChildFrame('body',index);
+                        var form = layui.form;
+                        if(data) {
+                            body.find("#id").val(data.id);
+                            body.find("#type").val(data.type);
+                        }
+                    }
+                });
             }
         });
 
@@ -138,10 +135,7 @@
                 $("#flag").attr("name",nameReload.val());
                 //执行重载
                 table.reload('admin-list', {
-                    url: remoteURL+"/admin/getAdmins.do"
-                    ,page: {
-                        curr: 1 //重新从第 1 页开始
-                    }
+                    url: remoteURL+"/articleType/getAllArticleTypes.do"
                     ,where: {
                         name:nameReload.val()
                     }
@@ -157,7 +151,7 @@
     });
 </script>
 <script type="text/html" id="bar">
-    <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>
+    <!--<a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>-->
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>-->
     <a class="layui-btn layui-btn-xs " lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
