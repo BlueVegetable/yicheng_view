@@ -32,6 +32,7 @@
         // 服务器统一请求接口路径
 		,serverUrl : "http://114.67.130.29/yicheng/ueditor/server.do"
 		// , serverUrl: "http://localhost:80/yicheng/ueditor/server.do"
+        // , serverUrl: "http://192.168.1.101:8081/yicheng/ueditor/server.do"
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[

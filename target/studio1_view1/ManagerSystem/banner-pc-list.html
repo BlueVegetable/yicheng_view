@@ -44,9 +44,9 @@
                 else
                     string+="<td class='td-status'><span class=\"layui-btn layui-btn-disabled layui-btn-mini\">不显示</span></td>";
 
-                if(data.url==null)
-                    data.url="";
-                string+="<td>"+data.url+"</td>";
+                if(data.location==null)
+                    data.location="";
+                string+="<td>"+data.location+"</td>";
 
                 string+= "<td class='td-manage'>";
 
@@ -60,7 +60,7 @@
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
                 string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"')\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.location+"')\" " +
                     "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
 
                 if(number!=0) {
@@ -87,7 +87,7 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./banner-add.html',500,450)">
+            <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./banner-pc-add.html',500,450)">
                 <i class="layui-icon">&#xe608;</i>添加轮播图
             </button>
             <table class="layui-table">
@@ -95,7 +95,7 @@
                     <tr>
                         <th>缩略图</th>
                         <th>状态</th>
-                        <th>链接地址</th>
+                        <th>所属模块</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -256,7 +256,7 @@
                     });
                 });
             }
-            function banner_edit(id,image,url) {
+            function banner_edit(id,image,location) {
                 layui.use(['layer','form'],function () {
                     var layer = layui.layer;
                     layer.open({
@@ -269,7 +269,7 @@
                             var form = layui.form;
                             body.find("#id").val(id);
                             body.find("#image").attr("src",image);
-                            body.find("#url").val(url);
+                            body.find("#location").val(location);
                             form.render();
                         }
                     });

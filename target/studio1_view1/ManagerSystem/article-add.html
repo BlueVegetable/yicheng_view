@@ -17,17 +17,17 @@
         <script src="./js/jquery-3.1.1.min.js"></script>
         <script src="./layui/layui.js" charset="utf-8"></script>
         <script src="./js/x-layui.js" charset="utf-8"></script>
-
         <script>
             $.ajax({
                 type: "POST",
-                url:  remoteURL+"/articleType/getAllArticleTypes.do",
+                url:  remoteURL+"/module/getAllModules.do",
                 data: {},
                 dataType: "json",
                 success: function(res){
-                    $("#type").html("");
+                    $("#module").html("");
+                    $("#module").append("<option value=''>请先选择模块</option>");
                     for (var i = 0; i < res.length; i++) {
-                        $("#type").append("<option value='"+res[i].id+"'>"+res[i].type+"</option>");
+                        $("#module").append("<option value='"+res[i].id+"'>"+res[i].moduleName+"</option>");
                     }
                     layui.use('form',function () {
                         var form = layui.form;
@@ -61,10 +61,20 @@
                             <input type="text" name="title" lay-verify="required" autocomplete="off" class="layui-input">
                         </div>
                     </div>
+                </div>
+                <div class="layui-form-item" style="text-align: center">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">所属模块</label>
+                        <div class="layui-input-inline" style="z-index: 10;">
+                            <select id="module" name="type" lay-verify="required" lay-filter="module" lay-search="" style="z–index:10">
+                            </select>
+                        </div>
+                    </div>
                     <div class="layui-inline">
                         <label class="layui-form-label">文章类型</label>
                         <div class="layui-input-inline" style="z-index: 10;">
-                            <select id="type" name="type" lay-verify="required" lay-search="" style="z–index:10">
+                            <select id="type" name="typeID" lay-verify="required" lay-search="" style="z–index:10">
+                                <option value=''>请选择文章类型</option>
                             </select>
                         </div>
                     </div>
@@ -93,6 +103,25 @@
         var form = layui.form;
         form.render();
 
+        form.on('select(module)',function (data) {
+            $.ajax({
+                type: "POST",
+                url:  remoteURL+"/articleType/getAllArticleTypesByModuleID.do",
+                data: {moduleID:data.value},
+                dataType: "json",
+                success: function(res){
+                    $("#type").html("");
+                    $("#type").append("<option value=''>请选择文章类型</option>");
+                    for (var i = 0; i < res.length; i++) {
+                        $("#type").append("<option value='"+res[i].id+"'>"+res[i].type+"</option>");
+                    }
+                    layui.use('form',function () {
+                        var form = layui.form;
+                        form.render();
+                    });
+                }
+            });
+        });
         form.on('submit(demo1)', function(data){
             data.field.content=getContent();
             var token=sessionStorage.getItem("token");

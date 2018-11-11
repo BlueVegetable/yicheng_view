@@ -67,7 +67,23 @@
             ,cols: [[
                 {field:'id', title: 'ID',align:"center", sort: true}
                 ,{field:'title', title: '文章名',align:"center"}
-                ,{field:'type', title: '文章类型'}
+                ,{field:'typeID', title: '文章类型',templet:function (data) {
+                        var result = "";
+                        $.ajax({
+                            type: "POST",
+                            url:  remoteURL+"/articleType/getArticleTypeByTypeID.do",
+                            data: {typeID:data.typeID},
+                            dataType: "json",
+                            async: false,
+                            success: function(res){
+                                console.log(res.data);
+                                if(res.code == 0)
+                                    result = res.data;
+                            }
+                        });
+                        return result;
+                    }
+                }
                 ,{field:'lastModify', title: '最后修改时间', templet:function (data) {
                         var date = new Date(data.lastModify);
                         return date.getFullYear()+"年"+(date.getMonth()+1)+"月"
