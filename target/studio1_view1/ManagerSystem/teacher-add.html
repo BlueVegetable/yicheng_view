@@ -143,14 +143,12 @@
                     if(res.code==0) {
                         layer.alert("添加成功", {icon: 6}
                         //这个本来是用来关掉小窗口的，不过这里不好用
-                        // ,function () {
-                        //     window.parent.window.init();
-                        //     // 获得frame索引
-                        //     var index = parent.layer.getFrameIndex(window.name);
-                        //     //关闭当前frame
-                        //     parent.layer.close(index);
-                        // }
-                        );
+                        ,function () {
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                            //关闭当前frame
+                            parent.layer.close(index);
+                        });
                     }
                     else {
                         layer.alert(res.msg,function () {

@@ -85,14 +85,9 @@
                 contentType:"application/json;charset=utf-8",
                 data: JSON.stringify(data.field),
                 dataType: "json",
-                headers: {
-                    'Content-Type' : 'application/json',
-                    'access-token' : token,
-                    'charset' : 'utf-8'
-                },
                 success: function(data){
                     console.log(data);
-                    if(data.code==1) {
+                    if(data.code==0) {
                         var table=parent.layui.table;
                         table.reload('admin-list', {
                             url:remoteURL+"/admin/getAdmins.do"
@@ -108,7 +103,7 @@
                         });
                     }
                     else {
-                        layer.alert(res.msg,function () {
+                        layer.alert(data.msg,function () {
                             // 获得frame索引
                             var index = parent.layer.getFrameIndex(window.name);
                             //关闭当前frame

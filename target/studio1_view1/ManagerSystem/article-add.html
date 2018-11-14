@@ -83,9 +83,9 @@
                     <!-- 加载编辑器的容器 -->
                     <div id="container" name="content" type="text/plain" style="height:450px;"></div>
                     <!-- 配置文件 -->
-                    <script type="text/javascript" src="../ueditor/ueditor.config.js"></script>
+                    <script type="text/javascript" src="./ueditor/ueditor.config.js"></script>
                     <!-- 编辑器源码文件 -->
-                    <script type="text/javascript" src="../ueditor/ueditor.all.js"></script>
+                    <script type="text/javascript" src="./ueditor/ueditor.all.js"></script>
                     <!-- 实例化编辑器 -->
                     <script type="text/javascript">
                         var ue = UE.getEditor('container');
@@ -123,7 +123,8 @@
             });
         });
         form.on('submit(demo1)', function(data){
-            data.field.content=getContent();
+            data.field.content = getContent();
+            data.field.brief = getContentTxt();
             var token=sessionStorage.getItem("token");
             console.log(JSON.stringify(data.field));
             $.ajax({
@@ -147,6 +148,9 @@
     });
     function getContent() {
         return UE.getEditor('container').getContent();
+    }
+    function getContentTxt() {
+        return UE.getEditor('container').getContentTxt();
     }
 </script>
 </html>
