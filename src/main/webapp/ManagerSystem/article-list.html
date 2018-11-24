@@ -65,8 +65,23 @@
                 token:token
             }
             ,cols: [[
-                {field:'id', title: 'ID',align:"center", sort: true}
-                ,{field:'title', title: '文章名',align:"center"}
+                // {field:'id', title: 'ID',align:"center", sort: true}
+                {field:'title', title: '文章名',align:"center"}
+                ,{field:'typeID', title: '所属模块',align:"center",templet:function (data) {
+                        var result = "";
+                        $.ajax({
+                            type: "POST",
+                            url:  remoteURL+"/module/getModuleByTypeID.do",
+                            data: {typeID:data.typeID},
+                            dataType: "json",
+                            async: false,
+                            success: function(res){
+                                result = res.moduleName;
+                            }
+                        });
+                        return result;
+                    }
+                }
                 ,{field:'typeID', title: '文章类型',templet:function (data) {
                         var result = "";
                         $.ajax({
@@ -76,7 +91,8 @@
                             dataType: "json",
                             async: false,
                             success: function(res){
-                                console.log(res.data);
+                                console.log(data);
+                                // console.log(res.data);
                                 if(res.code == 0)
                                     result = res.data;
                             }
