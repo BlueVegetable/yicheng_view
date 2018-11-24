@@ -7,24 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ab847e2-8c7c-4291-ba93-462fa7ff8f66" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-list2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/ueditor/ueditor.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-pc-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-pc-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/yicheng_view.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/yicheng_view.war" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,7 +30,7 @@
     <session id="140558466">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="75" />
+          <entry key="project.closed" value="76" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="13" />
           <entry key="project.open.time.12" value="1" />
@@ -71,7 +62,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="9102" />
+          <entry key="html" value="9412" />
           <entry key="js" value="1542" />
           <entry key="json" value="39" />
           <entry key="xml" value="3" />
@@ -79,7 +70,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="9102" />
+          <entry key="HTML" value="9412" />
           <entry key="JSON" value="39" />
           <entry key="JavaScript" value="1542" />
           <entry key="XML" value="3" />
@@ -87,7 +78,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="121" />
+          <entry key="html" value="131" />
           <entry key="js" value="48" />
           <entry key="json" value="4" />
           <entry key="jsp" value="3" />
@@ -97,7 +88,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="121" />
+          <entry key="HTML" value="131" />
           <entry key="JSON" value="4" />
           <entry key="JSP" value="3" />
           <entry key="JavaScript" value="48" />
@@ -139,37 +130,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-list2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="225" column="90" selection-start-line="225" selection-start-column="90" selection-end-line="225" selection-end-column="90" />
+            <state relative-caret-position="239">
+              <caret line="253" column="44" selection-start-line="253" selection-start-column="40" selection-end-line="253" selection-end-column="44" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="279">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-list.html">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="80" column="38" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+            <state relative-caret-position="120">
+              <caret line="264" column="29" lean-forward="true" selection-start-line="264" selection-start-column="29" selection-end-line="264" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#i#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,6 +191,8 @@
       <find>ueditor</find>
       <find>catchRemoteImageEnable</find>
       <find>id</find>
+      <find>path</find>
+      <find>delete</find>
     </findStrings>
     <replaceStrings>
       <replace>http://localhost:80</replace>
@@ -248,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/admin-add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/address-add.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/ueditor/ueditor.config.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-edit.html" />
@@ -256,10 +249,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-add.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-edit.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-list.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-list.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/js/url.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-list.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-edit.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-add.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-list2.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" />
       </list>
     </option>
   </component>
@@ -324,13 +320,7 @@
             <path>
               <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
               <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -343,7 +333,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543064698620" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543069109335" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../studio1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -353,15 +343,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem\lib" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem\js" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\后台管理系统" />
       <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\WEB-INF\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Application\IDEA\studio1_view1\src\main\webapp\ManagerSystem" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -624,16 +614,15 @@
       <workItem from="1542981565960" duration="90000" />
       <workItem from="1543023759296" duration="6967000" />
       <workItem from="1543059441953" duration="8000" />
-      <workItem from="1543060031912" duration="4582000" />
+      <workItem from="1543060031912" duration="9060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184901000" />
+    <option name="totallyTimeSpent" value="189379000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1376" height="784" extended-state="7" />
-    <editor active="true" />
+    <frame x="1358" y="-8" width="1376" height="784" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.2587519" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -652,7 +641,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32879046" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32879046" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32854864" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" weight="0.12436116" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32879046" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
@@ -676,20 +665,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/admin-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1940">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/ueditor/third-party/highcharts/highcharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="36" column="477" selection-start-line="36" selection-start-column="477" selection-end-line="36" selection-end-column="477" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -834,11 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-960" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/address-add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -850,13 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="105" column="58" lean-forward="true" selection-start-line="105" selection-start-column="58" selection-end-line="105" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="145" column="38" selection-start-line="145" selection-start-column="38" selection-end-line="145" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -891,13 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="62" column="71" lean-forward="true" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/ueditor/ueditor.all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463540">
@@ -923,29 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
           <caret line="114" column="56" lean-forward="true" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="106" column="68" selection-start-line="106" selection-start-column="50" selection-end-line="106" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="112" column="39" selection-start-line="112" selection-start-column="39" selection-end-line="112" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -987,16 +920,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="225" column="90" selection-start-line="225" selection-start-column="90" selection-end-line="225" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/banner-pc-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="-138">
           <caret line="80" column="38" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
@@ -1007,6 +933,82 @@
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/article-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="62" column="71" lean-forward="true" selection-start-line="62" selection-start-column="70" selection-end-line="62" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="126" column="27" lean-forward="true" selection-start-line="121" selection-start-column="24" selection-end-line="126" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="126" column="27" lean-forward="true" selection-start-line="121" selection-start-column="24" selection-end-line="126" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="157" column="27" selection-start-line="157" selection-start-column="27" selection-end-line="157" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1420">
+          <caret line="92" column="29" lean-forward="true" selection-start-line="86" selection-start-column="28" selection-end-line="92" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-list2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="253" column="44" selection-start-line="253" selection-start-column="40" selection-end-line="253" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/teacher-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="264" column="29" lean-forward="true" selection-start-line="264" selection-start-column="29" selection-end-line="264" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#i#0;n#a#0;n#li#6;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
