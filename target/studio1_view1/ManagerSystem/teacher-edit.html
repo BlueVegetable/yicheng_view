@@ -43,7 +43,6 @@
             <label class="layui-form-label" style="width:100px">教师名称</label>
             <div class="layui-input-inline">
                 <input id="name" type="text" name="name" autocomplete="off" class="layui-input" lay-verify="name">
-
             </div>
         </div>
     </div>
@@ -76,7 +75,7 @@
             ,layer = layui.layer
             ,upload = layui.upload;
 
-        var uploadInst = upload.render({
+        upload.render({
             elem:'#upload'
             ,url:remoteURL+"/teacher/upload.do"
             ,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
@@ -129,10 +128,20 @@
                 success: function(res){
                     console.log(res);
                     if(res.code==0) {
-                        layer.alert("修改成功", {icon: 6});
+                        layer.alert("修改成功", {icon: 6},function () {
+                            window.parent.window.init();
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                            //关闭当前frame
+                            parent.layer.close(index);
+                        });
                     }
                     else {
                         layer.alert(res.msg,function () {
+                            // 获得frame索引
+                            var index = parent.layer.getFrameIndex(window.name);
+                            //关闭当前frame
+                            parent.layer.close(index);
                         });
                     }
                 }
