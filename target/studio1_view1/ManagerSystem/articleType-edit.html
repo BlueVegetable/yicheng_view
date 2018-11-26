@@ -38,6 +38,14 @@
         </div>
     </div>
     <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label" style="width:100px">跳转链接</label>
+            <div class="layui-input-inline">
+                <input id="url" type="text" name="url" autocomplete="off" class="layui-input" lay-verify="type">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
         <div class="layui-input-block">
             <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
         </div>
@@ -64,7 +72,7 @@
             $.ajax({
                 type: "POST",
                 url:  remoteURL+"/articleType/alterArticleTypeName.do",
-                data: {id:data.field.id,name:data.field.name},
+                data: {id:data.field.id,name:data.field.name,url:data.field.url},
                 dataType: "json",
                 success: function(res){
                     console.log(res);
