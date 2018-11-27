@@ -35,18 +35,45 @@
                 });
             }
             function show(data,number,allNumber) {
-                console.log(data);
+                var module = null,articleType = null;
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/articleType/getArticleTypeByTypeID.do",
+                    data: {typeID:data.articleTypeID},
+                    async: false,
+                    dataType: "json",
+                    success: function(res){
+                        articleType = res;
+                    }
+                });
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/module/getModuleByTypeID.do",
+                    data: {typeID:data.articleTypeID},
+                    async: false,
+                    dataType: "json",
+                    success: function(res){
+                        module = res;
+                    }
+                });
                 var string="";
                 string+="<tr>"+
-                    "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
+                    "<td width='190px'>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
+
+                string+= "<td>"+"<img  src="+remoteImageURL+data.smallPath+" width='100' alt=''>"+"</td>";
+
+                string+= "<td>"+module.moduleName+"</td>";
+
+                string+= "<td>"+articleType.data+"</td>";
+
                 if(data.url==null)
                     data.url="";
                 string+="<td>"+data.url+"</td>";
 
-                string+= "<td class='td-manage'>";
+                string+= "<td class='td-manage' style='width: 80px;'>";
 
                 string+="<a class=\"layui-btn layui-btn-mini\" title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"','"+data.path+"','"+data.articleTypeID+"')\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+remoteImageURL+data.smallPath+"','"+data.url+"','"+data.path+"','"+data.smallPath+"','"+data.articleTypeID+"')\" " +
                     "style=\"text-decoration:none\">修改</a>";
                 string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
@@ -62,7 +89,7 @@
             <span class="layui-breadcrumb">
               <a><cite>首页</cite></a>
               <a><cite>图片管理</cite></a>
-              <a><cite>PC首页各模块图片管理</cite></a>
+              <a><cite>添加PC文章类型图片</cite></a>
             </span>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
@@ -70,13 +97,16 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <button type="button" class="layui-btn" onclick="banner_add('添加模块图片','./articleType-picture-add.html',500,550)">
-                <i class="layui-icon">&#xe608;</i>添加模块图片
+            <button type="button" class="layui-btn" onclick="banner_add('添加PC文章类型图片','./articleType-picture-add.html',500,550)">
+                <i class="layui-icon">&#xe608;</i>添加PC文章类型图片
             </button>
             <table class="layui-table">
                 <thead>
                     <tr>
-                        <th>缩略图</th>
+                        <th>大图片缩略图</th>
+                        <th>小图片缩略图</th>
+                        <th>所属文章模块</th>
+                        <th>所属文章类型</th>
                         <th>链接地址</th>
                         <th>操作</th>
                     </tr>
@@ -190,12 +220,12 @@
                     });
                 });
             }
-            function banner_edit(id,path,url,relativePath,articleTypeID) {
+            function banner_edit(id,path,smallPath,url,relativePath,relativePath2,articleTypeID) {
                 layui.use(['layer','form'],function () {
                     var layer = layui.layer;
                     layer.open({
                         type:2,
-                        title:"修改首页广告图",
+                        title:"修改PC文章类型图片",
                         content:"./articleType-picture-edit.html?articleTypeID="+articleTypeID,
                         area:['500px','550px'],
                         success:function (layero, index) {
@@ -203,8 +233,10 @@
                             var form = layui.form;
                             body.find("#id").val(id);
                             body.find("#image").attr("src",path);
+                            body.find("#image2").attr("src",smallPath);
                             body.find("#url").val(url);
                             body.find("#path").val(relativePath);
+                            body.find("#smallPath").val(relativePath2);
                             form.render();
                         }
                     });
