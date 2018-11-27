@@ -60,9 +60,19 @@
     </div>
     <div class="layui-form-item">
         <div class="layui-inline">
-            <label class="layui-form-label" style="width:100px">所属模块</label>
+            <label class="layui-form-label" style="width:100px">请先选择模块</label>
             <div class="layui-input-inline">
                 <select id="moduleID" name="moduleID" lay-verify="moduleID" lay-filter="module" lay-search="" style="z–index:10">
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label" style="width:100px">文章类型</label>
+            <div class="layui-input-inline" style="z-index: 10;">
+                <select id="type" name="articleTypeID" lay-verify="required" lay-search="" style="z–index:10">
+                    <option value=''>请选择文章类型</option>
                 </select>
             </div>
         </div>
@@ -79,7 +89,6 @@
         <div class="layui-inline">
             <div class="layui-input-inline">
                 <input id="path" type="hidden" name="path" autocomplete="off" class="layui-input" lay-verify="path" >
-                <input id="type" type="hidden" name="type" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>
@@ -117,6 +126,26 @@
                 layer.closeAll('loading'); //关闭loading
                 layer.alert("上传失败");
             }
+        });
+
+        form.on('select(module)',function (data) {
+            $.ajax({
+                type: "POST",
+                url:  remoteURL+"/articleType/getAllArticleTypesByModuleID.do",
+                data: {moduleID:data.value},
+                dataType: "json",
+                success: function(res){
+                    $("#type").html("");
+                    $("#type").append("<option value=''>请选择文章类型</option>");
+                    for (var i = 0; i < res.length; i++) {
+                        $("#type").append("<option value='"+res[i].id+"'>"+res[i].type+"</option>");
+                    }
+                    layui.use('form',function () {
+                        var form = layui.form;
+                        form.render();
+                    });
+                }
+            });
         });
 
         form.verify({
