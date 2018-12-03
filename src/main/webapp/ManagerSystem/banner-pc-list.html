@@ -37,23 +37,39 @@
             function show(data,number,allNumber){
                 console.log(data);
                 var string="";
+                var module = null;
                 string+="<tr>"+
                     "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
-                if(data.visible==1)
-                    string+="<td class='td-status'><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>";
-                else
-                    string+="<td class='td-status'><span class=\"layui-btn layui-btn-disabled layui-btn-mini\">不显示</span></td>";
+                // if(data.visible==1)
+                //     string+="<td class='td-status'><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>";
+                // else
+                //     string+="<td class='td-status'><span class=\"layui-btn layui-btn-disabled layui-btn-mini\">不显示</span></td>";
 
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/module/getModuleByID.do",
+                    data: {moduleID:data.location},
+                    dataType: "json",
+                    async: false,
+                    success: function(res){
+                        module = res.data;
+                    }
+                });
                 if(data.location==null)
                     data.location="";
-                string+="<td>"+data.location+"</td>";
+
+                string+="<td>"+module.moduleName+"</td>";
+
+                if(data.url == null)
+                    data.url = "";
+                string+="<td>"+data.url+"</td>";
 
                 string+= "<td class='td-manage'>";
 
-                if(data.visible==1)
-                    string+= "<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick=\"banner_stop(this,id)\" href=\"javascript:;\" title=\"不显示\"><i class=\"layui-icon\">&#xe601;</i></a>";
-                else
-                    string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onClick=\"banner_start(this,id)\" href=\"javascript:;\" title=\"显示\"><i class=\"layui-icon\">&#xe62f;</i></a>";
+                // if(data.visible==1)
+                //     string+= "<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick=\"banner_stop(this,id)\" href=\"javascript:;\" title=\"不显示\"><i class=\"layui-icon\">&#xe601;</i></a>";
+                // else
+                //     string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onClick=\"banner_start(this,id)\" href=\"javascript:;\" title=\"显示\"><i class=\"layui-icon\">&#xe62f;</i></a>";
 
                 string+= "<a title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe640;</i></a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
@@ -63,12 +79,12 @@
                     "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.location+"')\" " +
                     "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
 
-                if(number!=0) {
-                    string+="<a style=\"text-decoration:none\"  bannerId='"+data.id+"' onclick='banner_up(this)' href=\"javascript:;\" title=\"向上移动\"><i class=\"layui-icon\">&#xe619;</i></a>";
-                }
-                if(number!=(allNumber-1)) {
-                    string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick='banner_down(this)' href=\"javascript:;\" title=\"向下移动\"><i class=\"layui-icon\">&#xe61a;</i></a>";
-                }
+                // if(number!=0) {
+                //     string+="<a style=\"text-decoration:none\"  bannerId='"+data.id+"' onclick='banner_up(this)' href=\"javascript:;\" title=\"向上移动\"><i class=\"layui-icon\">&#xe619;</i></a>";
+                // }
+                // if(number!=(allNumber-1)) {
+                //     string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick='banner_down(this)' href=\"javascript:;\" title=\"向下移动\"><i class=\"layui-icon\">&#xe61a;</i></a>";
+                // }
                 string+="</td></tr>";
                 return string;
             }
@@ -94,8 +110,8 @@
                 <thead>
                     <tr>
                         <th>缩略图</th>
-                        <th>状态</th>
                         <th>所属模块</th>
+                        <th>跳转链接</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -198,7 +214,7 @@
                     //发异步删除数据
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/Banner/deleteBanner.do",
+                        url:  remoteURL+"/BannerPC/deleteBannerPC.do",
                         data: {id:bannerId},
                         dataType: "json",
                         success: function(data){
@@ -262,7 +278,7 @@
                     layer.open({
                         type:2,
                         title:"修改轮播图",
-                        content:"./banner-edit.html",
+                        content:"./banner-pc-edit.html",
                         area:['500px','400px'],
                         success:function (layero, index) {
                             var body = layer.getChildFrame('body',index);
