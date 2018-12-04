@@ -41,6 +41,18 @@
     </div>
     <div class="layui-form-item">
         <div class="layui-inline">
+            <label class="layui-form-label" style="width:100px">首页大图片</label>
+            <div class="layui-input-inline">
+                <select name="topest" lay-verify="required" lay-search="">
+                    <option value="">是否设为首页大图片</option>
+                    <option value="true">是</option>
+                    <option value="false">否</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">链接地址</label>
             <div class="layui-input-inline">
                 <input id="name" type="text" name="url" autocomplete="off" class="layui-input">
@@ -100,7 +112,7 @@
         });
 
         form.on('submit(onup)', function(data) {
-
+            console.log(data.field);
             var token = sessionStorage.getItem('token');
             $.ajax({
                 type: "POST",
@@ -119,12 +131,7 @@
                         });
                     }
                     else {
-                        layer.alert(res.msg,function () {
-                            // 获得frame索引
-                            var index = parent.layer.getFrameIndex(window.name);
-                            //关闭当前frame
-                            parent.layer.close(index);
-                        });
+                        layer.alert(res.msg);
                     }
                 }
             });

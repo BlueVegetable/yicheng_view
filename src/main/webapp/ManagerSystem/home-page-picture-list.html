@@ -42,6 +42,11 @@
                 if(data.url==null)
                     data.url="";
                 string+="<td>"+data.url+"</td>";
+                if(data.topest) {
+                    string+="<td>是</td>";
+                } else {
+                    string+="<td>不是</td>";
+                }
 
                 string+= "<td class='td-manage'>";
 
@@ -78,6 +83,7 @@
                     <tr>
                         <th>缩略图</th>
                         <th>链接地址</th>
+                        <th>是否为首页大图片</th>
                         <th>操作</th>
                     </tr>
                 </thead>
