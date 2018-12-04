@@ -53,6 +53,7 @@
             ,cols: [[
                 // {field:'id', title: 'ID',align:"center", sort: true}
                 {field:'moduleName', title: '模块名称',align:"center"}
+                ,{field:'bannerPcName', title: '模块轮播图名称',align:"center"}
                 ,{field:'bannerPcState', title: '模块轮播图说明',align:"center"}
                 ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}
             ]]
@@ -91,13 +92,14 @@
                     type:2,
                     title:"修改类型名称",
                     content:"./module-edit.html",
-                    area:['460px','400px'],
+                    area:['460px','500px'],
                     success:function (layero, index) {
                         var body = layer.getChildFrame('body',index);
                         var form = layui.form;
                         if(data) {
                             body.find("#id").val(data.id);
                             body.find("#moduleName").val(data.moduleName);
+                            body.find("#bannerPcName").val(data.bannerPcName);
                             body.find("#bannerPcState").val(data.bannerPcState);
                         }
                     }
