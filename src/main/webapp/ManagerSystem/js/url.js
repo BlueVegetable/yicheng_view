@@ -15,3 +15,7 @@ var remoteImageURL = "http://114.67.130.29/upload";
 //局域网服务器
 // var remoteURL = "http://192.168.1.101:8081/yicheng";
 // var remoteImageURL = "http://192.168.1.101:8081/upload";
+
+//阿里云服务器
+// var remoteURL="http://119.23.17.111:8083/yicheng";
+// var remoteImageURL = "http://119.23.17.111:8083/upload";

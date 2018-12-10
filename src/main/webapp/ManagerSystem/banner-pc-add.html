@@ -68,14 +68,14 @@
             </div>
         </div>
     </div>
-    <!--<div class="layui-form-item">
+    <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">链接地址</label>
             <div class="layui-input-inline">
                 <input id="name" type="text" name="url" autocomplete="off" class="layui-input">
             </div>
         </div>
-    </div>-->
+    </div>
     <div class="layui-form-item" style="display: none">
         <div class="layui-inline">
             <div class="layui-input-inline">
@@ -121,7 +121,7 @@
         });
 
         form.verify({
-            path: git function (value) {
+            path: function (value) {
                 if($("#path").val().length<=0)
                     return "请先上传图片";
             }
