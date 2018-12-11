@@ -22,7 +22,7 @@
             function init() {
                 $.ajax({
                     type: "POST",
-                    url:  remoteURL+"/modulePicture/getAllModulePicturesDeal.do",
+                    url:  remoteURL+"/moduleExtraPicture/getAllModuleExtraPicturesDeal.do",
                     data: {visible:"0"},
                     dataType: "json",
                     success: function(datas){
@@ -41,12 +41,25 @@
                     "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
                 if(data.url==null)
                     data.url="";
+                var module = null;
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/module/getModuleByID.do",
+                    data: {moduleID:data.moduleId},
+                    async: false,
+                    dataType: "json",
+                    success: function(res){
+                        module = res.data;
+                    }
+                });
+                string+="<td>"+module.moduleName+"</td>";
+
                 string+="<td>"+data.url+"</td>";
 
                 string+= "<td class='td-manage'>";
 
                 string+="<a class=\"layui-btn layui-btn-mini\" title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"','"+data.path+"','"+data.moduleID+"')\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"','"+data.path+"','"+data.moduleId+"')\" " +
                     "style=\"text-decoration:none\">修改</a>";
                 string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
@@ -70,13 +83,14 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <button type="button" class="layui-btn" onclick="banner_add('添加模块图片','./module-picture-add.html',500,500)">
+            <button type="button" class="layui-btn" onclick="banner_add('添加模块图片','./module-extra-picture-add.html',500,500)">
                 <i class="layui-icon">&#xe608;</i>添加模块图片
             </button>
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th>缩略图</th>
+                        <th>所属模块</th>
                         <th>链接地址</th>
                         <th>操作</th>
                     </tr>
@@ -175,8 +189,8 @@
                     //发异步删除数据
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/modulePicture/deleteModulePicture.do",
-                        data: {modulePictureID:bannerId},
+                        url:  remoteURL+"/moduleExtraPicture/deleteModuleExtraPicture.do",
+                        data: {moduleExtraPictureID:bannerId},
                         dataType: "json",
                         success: function(data){
                             if(data){
@@ -195,8 +209,8 @@
                     var layer = layui.layer;
                     layer.open({
                         type:2,
-                        title:"修改首页广告图",
-                        content:"./module-picture-edit.html?moduleID="+moduleID,
+                        title:"修改模块额外广告图",
+                        content:"./module-extra-picture-edit.html?moduleID="+moduleID,
                         area:['500px','500px'],
                         success:function (layero, index) {
                             var body = layer.getChildFrame('body',index);

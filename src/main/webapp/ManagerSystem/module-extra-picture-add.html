@@ -36,7 +36,7 @@
 </head>
 <body>
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>添加模块图片</legend>
+    <legend>添加额外模块图片</legend>
 </fieldset>
 
 <form class="layui-form">
@@ -101,7 +101,7 @@
 
         upload.render({
             elem:'#upload'
-            ,url:remoteURL+"/modulePicture/uploadModulePicture.do"
+            ,url:remoteURL+"/moduleExtraPicture/uploadModuleExtraPicture.do"
             ,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
                 layer.load(); //上传loading
             }
@@ -136,7 +136,7 @@
             var token = sessionStorage.getItem('token');
             $.ajax({
                 type: "POST",
-                url:  remoteURL+"/modulePicture/addModulePicture.do",
+                url:  remoteURL+"/moduleExtraPicture/addModuleExtraPicture.do",
                 data: data.field,
                 dataType: "json",
                 success: function(res){
