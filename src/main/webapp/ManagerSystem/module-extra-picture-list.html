@@ -41,12 +41,25 @@
                     "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
                 if(data.url==null)
                     data.url="";
+                var module = null;
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/module/getModuleByID.do",
+                    data: {moduleID:data.moduleId},
+                    async: false,
+                    dataType: "json",
+                    success: function(res){
+                        module = res.data;
+                    }
+                });
+                string+="<td>"+module.moduleName+"</td>";
+
                 string+="<td>"+data.url+"</td>";
 
                 string+= "<td class='td-manage'>";
 
                 string+="<a class=\"layui-btn layui-btn-mini\" title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"','"+data.path+"','"+data.moduleID+"')\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"','"+data.path+"','"+data.moduleId+"')\" " +
                     "style=\"text-decoration:none\">修改</a>";
                 string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
@@ -77,6 +90,7 @@
                 <thead>
                     <tr>
                         <th>缩略图</th>
+                        <th>所属模块</th>
                         <th>链接地址</th>
                         <th>操作</th>
                     </tr>

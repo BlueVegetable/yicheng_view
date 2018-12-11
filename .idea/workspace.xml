@@ -7,7 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ab847e2-8c7c-4291-ba93-462fa7ff8f66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/url.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/url.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,12 +26,12 @@
     <favorites_list name="studio1_view1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="80" column="35" lean-forward="true" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+            <state relative-caret-position="-1340">
+              <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
@@ -187,7 +192,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,6 +234,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,17 +525,18 @@
       <workItem from="1543916100966" duration="510000" />
       <workItem from="1543933352962" duration="47000" />
       <workItem from="1543938295657" duration="168000" />
+      <workItem from="1544511829429" duration="175000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193646000" />
+    <option name="totallyTimeSpent" value="193821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.23333333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.23712121" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -538,6 +544,7 @@
       <window_info id="Favorites" order="5" sideWeight="0.5008518" side_tool="true" weight="0.30530304" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.14650767" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.23726115" />
@@ -553,6 +560,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -878,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="80" column="35" lean-forward="true" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+        <state relative-caret-position="-1340">
+          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
