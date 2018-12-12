@@ -95,16 +95,42 @@
                     ,cols: [[
                         // {field:'id', width:100, title: '咨询单ID',align:"center", sort: true}
                         {field:'name', width:120, title: '咨询者名字',align:"center"}
-                        // ,{width:135, title:'年龄段', align:"center", templet:function (data) {
-                        //         console.log(data);
-                        //         return getAge(data.age);
-                        //     }
-                        // }
-                        // ,{width:135, title:'当前学历', align:"center", templet:function (data) {
-                        //         console.log(data);
-                        //         return getCurrentEducation(data.currentEducation);
-                        //     }
-                        // }
+                        ,{title:'学历层次', align:"center", templet:function (data) {
+                                var educationLevel = null;
+                                $.ajax({
+                                    type: "POST",
+                                    url:  remoteURL+"/educationLevel/getEducationLevelByID.do",
+                                    data: {id:data.currentEducation},
+                                    async: false,
+                                    dataType: "json",
+                                    success: function(res){
+                                        educationLevel = res;
+                                    }
+                                });
+                                if(educationLevel != null)
+                                    return educationLevel.name;
+                                else
+                                    return "";
+                            }
+                        }
+                        ,{title:'专业课程', align:"center", templet:function (data) {
+                                var professionCourse = null;
+                                $.ajax({
+                                    type: "POST",
+                                    url:  remoteURL+"/majorCourse/getMajorCourseByID.do",
+                                    data: {id:data.profession},
+                                    async: false,
+                                    dataType: "json",
+                                    success: function(res){
+                                        professionCourse = res;
+                                    }
+                                });
+                                if(professionCourse != null)
+                                    return professionCourse.name;
+                                else
+                                    return "";
+                            }
+                        }
                         // ,{title:'工作年限', align:'center',templet:function (data) {
                         //         return getWorkTime(data.workTime);
                         //     }
@@ -131,10 +157,6 @@
                         ,{align:'center', toolbar: '#bar',title:'操作'}
                     ]]
                     ,limits:['10']
-                });
-
-                table.on('checkbox(demo)', function(obj){
-                    console.log(obj)
                 });
 
                 //监听工具条
