@@ -27,7 +27,7 @@
 
 <div class="x-body">
     <xblock>
-        <button class="layui-btn layui-btn-normal" onclick="admin_add('添加视频','./video-add.html',460,430)">
+        <button class="layui-btn layui-btn-normal" onclick="admin_add('添加视频','./video-add.html',500,500)">
             <i class="layui-icon">&#xe608;</i>
             添加
         </button>
@@ -56,10 +56,8 @@
 
         table.render({
             elem: '#article-list'
-            ,url:remoteURL+"/video/getVideosDeal.do"
-            ,where:{
-                token:token
-            }
+            ,url:remoteURL+"/video/getVideosDeal.do?token="+token
+            ,page:true
             ,cols: [[
                 // {field:'id', title: 'ID',align:"center", sort: true}
                 {field:'name', title: '视频名称',align:"center"}
@@ -82,6 +80,7 @@
                 }
                 ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}
             ]]
+            ,limits:['10']
         });
 
         table.on('tool(bar)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
@@ -94,12 +93,12 @@
                 window.open("./article-show.html?articleID="+data.id);
                 //do somehing
             } else if(layEvent === 'del'){ //删除
-                layer.confirm('如果类型删除，则该类型下的所有文章都会删除，是否继续?', function(index){
+                layer.confirm('您确定要删除该视频吗？', function(index){
                     //向服务端发送删除指令
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/video/deleteArticleType.do?token="+sessionStorage.getItem("token"),
-                        data: {articleTypeID:data.id},
+                        url:  remoteURL+"/video/deleteVideo.do?token="+sessionStorage.getItem("token"),
+                        data: {videoID:data.id},
                         dataType: "json",
                         success: function(res){
                             if(res.code==0) {
@@ -117,14 +116,15 @@
                     type:2,
                     title:"修改类型名称",
                     content:"./video-edit.html",
-                    area:['460px','400px'],
+                    area:['500px','400px'],
                     success:function (layero, index) {
                         var body = layer.getChildFrame('body',index);
                         var form = layui.form;
                         if(data) {
                             body.find("#id").val(data.id);
-                            body.find("#type").val(data.type);
+                            body.find("#name").val(data.name);
                             body.find("#url").val(data.url);
+                            body.find("#courseID").val(data.courseID);
                         }
                     }
                 });
