@@ -76,7 +76,7 @@
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
                 string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.location+"')\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.location+"','"+data.url+"','"+data.path+"')\" " +
                     "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
 
                 // if(number!=0) {
@@ -272,34 +272,26 @@
                     });
                 });
             }
-            function banner_edit(id,image,location) {
+            function banner_edit(id,image,location,url,path) {
                 layui.use(['layer','form'],function () {
                     var layer = layui.layer;
                     layer.open({
                         type:2,
-                        title:"修改轮播图",
-                        content:"./banner-pc-edit.html",
-                        area:['500px','400px'],
+                        title:"修改PC轮播图",
+                        content:"./banner-pc-edit.html?moduleID="+location,
+                        area:['500px','500px'],
                         success:function (layero, index) {
                             var body = layer.getChildFrame('body',index);
                             var form = layui.form;
                             body.find("#id").val(id);
+                            body.find("#url").val(url);
+                            body.find("#path").val(path);
                             body.find("#image").attr("src",image);
-                            body.find("#location").val(location);
                             form.render();
                         }
                     });
                 });
             }
         </script>
-        <!--<script>-->
-            <!--var _hmt = _hmt || [];-->
-            <!--(function() {-->
-              <!--var hm = document.createElement("script");-->
-              <!--hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";-->
-              <!--var s = document.getElementsByTagName("script")[0];-->
-              <!--s.parentNode.insertBefore(hm, s);-->
-            <!--})();-->
-        <!--</script>-->
     </body>
 </html>
