@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            后台管理系统
+        </title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="./css/x-admin.css" media="all">
+        <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="js/url.js"></script>
+
+        <script>
+            if(sessionStorage.getItem("token")==null)
+                window.location.href="./login.html";
+            window.onload=function () {
+                if(sessionStorage.getItem("token")==null)
+                    window.location.href="./login.html";
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/Consult/countUnDealing.do",
+                    data: {applyMethod:0},
+                    dataType: "json",
+                    success: function(res){
+                        initBadge(res);
+                    }
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="layui-layout layui-layout-admin">
+            <div class="layui-header header header-demo">
+                <div class="layui-main">
+                    <a class="logo" href="./index.html">
+                        后台管理系统
+                    </a>
+                    <ul class="layui-nav" lay-filter="">
+                      <li class="layui-nav-item"><img src="./images/logo.png" class="layui-circle" style="border: 2px solid #A9B7B7;" width="35px" alt=""></li>
+                      <li class="layui-nav-item">
+                        <a href="javascript:;">admin</a>
+                        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                          <dd><a href="">个人信息</a></dd>
+                          <dd><a href="">切换帐号</a></dd>
+                          <dd><a href="./login.html">退出</a></dd>
+                        </dl>
+                      </li>
+                      <!-- <li class="layui-nav-item">
+                        <a href="" title="消息">
+                            <i class="layui-icon" style="top: 1px;">&#xe63a;</i>
+                        </a>
+                        </li> -->
+                      <li class="layui-nav-item x-index"><a href="/">前台首页</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-side layui-bg-black x-side">
+                <div class="layui-side-scroll">
+                    <ul class="layui-nav layui-nav-tree site-demo-nav" lay-filter="side">
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe613;</i><cite>管理员管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./admin-list.html">
+                                        <cite>管理员列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe606;</i><cite>咨询管理 </cite><span id="bigBadge" class="layui-badge-dot"></span>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <dd class="">
+                                        <a href="javascript:;" _href="./consult-list.html">
+                                            <cite>咨询列表</cite> <span id="smallBadge1" class="layui-badge">1</span>
+                                        </a>
+                                    </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-college-list.html">
+                                        <cite>开放大学咨询列表</cite> <span id="smallBadge2" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-residence-list.html">
+                                        <cite>申请入户列表</cite> <span id="smallBadge3" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-work-list.html">
+                                        <cite>劳动查询</cite> <span id="smallBadge4" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-work-simple-list.html">
+                                        <cite>劳动报名</cite> <span id="smallBadge5" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-first-list.html">
+                                        <cite>首页咨询</cite> <span id="smallBadge7" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-guangzhou-residence-ask-list.html">
+                                        <cite>广州入户询问</cite> <span id="smallBadge8" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-guangzhou-residence-simple-list.html">
+                                        <cite>广州入户报名</cite> <span id="smallBadge9" class="layui-badge">1</span>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./consult-option-list.html">
+                                        <cite>咨询选项管理</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <!--<dl class="layui-nav-child">-->
+                                <!--<dd class="">-->
+                                <!--<dd class="">-->
+                                    <!--<a href="javascript:;" _href="./consult-statistics.html">-->
+                                        <!--<cite>报名归属地统计</cite>-->
+                                    <!--</a>-->
+                                <!--</dd>-->
+                                <!--</dd>-->
+                            <!--</dl>-->
+                        </li>
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe621;</i><cite>文章管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./article-add.html">
+                                        <cite>添加文章</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./article-list.html">
+                                        <cite>文章列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child" style="display: none;">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./article-edit.html" id="article_edit">
+                                        <cite>修改文章</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe656;</i><cite>文章类型管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./articleType-list.html">
+                                        <cite>文章类型列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe735;</i><cite>模块管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./module-list.html">
+                                        <cite>模块列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe64a;</i><cite>图片管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./home-page-picture-list.html">
+                                        <cite>首页广告图列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./module-picture-list.html">
+                                        <cite>PC首页各模块图片列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./module-extra-picture-list.html">
+                                        <cite>各模块额外图片列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./articleType-picture-list.html">
+                                        <cite>PC文章类型图片管理</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./banner-list.html">
+                                        <cite>移动轮播图列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./banner-pc-list.html">
+                                        <cite>PC端轮播图列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe6ed;</i><cite>视频管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./video-list.html">
+                                        <cite>视频列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+                        <!--校区地址管理 -->
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe715;</i><cite>校区管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./address-list.html">
+                                        <cite>校区列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+                        <!--教师管理  -->
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe66f;</i><cite>教师管理</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./teacher-list2.html">
+                                        <cite>教师列表</cite>
+                                    </a>
+                                </dd>
+                                </dd>
+                            </dl>
+                        </li>
+
+                        <li class="layui-nav-item">
+                            <a class="javascript:;" href="javascript:;">
+                                <i class="layui-icon" style="top: 3px;">&#xe614;</i><cite>系统设置</cite>
+                            </a>
+                            <dl class="layui-nav-child">
+                                <dd class="">
+                                    <a href="javascript:;" _href="./sys-set.html">
+                                        <cite>系统设置</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./sys-data.html">
+                                        <cite>数字字典</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./sys-shield.html">
+                                        <cite>屏蔽词</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./sys-log.html">
+                                        <cite>系统日志</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./sys-link.html">
+                                        <cite>友情链接</cite>
+                                    </a>
+                                </dd>
+                                <dd class="">
+                                    <a href="javascript:;" _href="./sys-qq.html">
+                                        <cite>第三方登录</cite>
+                                    </a>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="layui-tab layui-tab-card site-demo-title x-main" lay-filter="x-tab" lay-allowclose="true">
+                <div class="x-slide_left"></div>
+                <ul class="layui-tab-title" id="tab">
+                    <li class="layui-this">
+                        我的桌面
+                        <i class="layui-icon layui-unselect layui-tab-close">ဆ</i>
+                    </li>
+                </ul>
+                <div class="layui-tab-content site-demo site-demo-body" id="tab_content">
+                    <div class="layui-tab-item layui-show">
+                        <iframe frameborder="0" src="./welcome.html" class="x-iframe"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="site-mobile-shade">
+            </div>
+        </div>
+        <script src="./lib/layui/layui.js" charset="utf-8"></script>
+        <script src="./js/x-admin.js"></script>
+    </body>
+<script>
+    function initBadge(res){
+        $("#bigBadge").show();
+
+        var smallBadges = document.getElementsByClassName("layui-badge");
+        for (var i = 1; i <= smallBadges.length; i++) {
+            $("#smallBadge"+i).show();
+        }
+        if(res.count==0) {
+            $("#bigBadge").hide();
+        }
+        for(var i=0;i<res.data.length;i++) {
+            initOneBadge(res.data[i]);
+        }
+    }
+    function initOneBadge(data) {
+        if(document.getElementById("smallBadge"+data.applyMethod)==null)
+            return ;
+        if(data.number==0)
+            $("#smallBadge"+data.applyMethod).hide();
+        else
+            $("#smallBadge"+data.applyMethod).html(data.number);
+    }
+</script>
+</html>
