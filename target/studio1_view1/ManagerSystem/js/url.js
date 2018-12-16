@@ -2,10 +2,6 @@
 // var remoteURL="http://114.67.130.29/yicheng";
 // var remoteImageURL = "http://114.67.130.29/upload";
 
-//上线服务器：替换
-var remoteURL="http://106.13.32.172:8081/yicheng";
-var remoteImageURL = "http://106.13.32.172:8081/upload";
-
 // var remoteURL="http://localhost:80/studio1";
 // var remoteImageURL = "http://localhost:80/upload";
 

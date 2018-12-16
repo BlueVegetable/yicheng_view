@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-             易动科技  V1.0
+            PC首页各模块额外图片管理
         </title>
         <meta name="renderer" content="webkit">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,7 +22,7 @@
             function init() {
                 $.ajax({
                     type: "POST",
-                    url:  remoteURL+"/Banner/getBanners.do",
+                    url:  remoteURL+"/moduleExtraPicture/getAllModuleExtraPicturesDeal.do",
                     data: {visible:"0"},
                     dataType: "json",
                     success: function(datas){
@@ -34,41 +34,37 @@
                     }
                 });
             }
-            function show(data,number,allNumber){
+            function show(data,number,allNumber) {
                 console.log(data);
                 var string="";
                 string+="<tr>"+
                     "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
-                if(data.visible==1)
-                    string+="<td class='td-status'><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>";
-                else
-                    string+="<td class='td-status'><span class=\"layui-btn layui-btn-disabled layui-btn-mini\">不显示</span></td>";
-
                 if(data.url==null)
                     data.url="";
+                var module = null;
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/module/getModuleByID.do",
+                    data: {moduleID:data.moduleId},
+                    async: false,
+                    dataType: "json",
+                    success: function(res){
+                        module = res.data;
+                    }
+                });
+                string+="<td>"+module.moduleName+"</td>";
+
                 string+="<td>"+data.url+"</td>";
 
                 string+= "<td class='td-manage'>";
 
-                if(data.visible==1)
-                    string+= "<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick=\"banner_stop(this,id)\" href=\"javascript:;\" title=\"不显示\"><i class=\"layui-icon\">&#xe601;</i></a>";
-                else
-                    string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onClick=\"banner_start(this,id)\" href=\"javascript:;\" title=\"显示\"><i class=\"layui-icon\">&#xe62f;</i></a>";
-
-                string+= "<a title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe640;</i></a>";
+                string+="<a class=\"layui-btn layui-btn-mini\" title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"','"+data.path+"','"+data.moduleId+"')\" " +
+                    "style=\"text-decoration:none\">修改</a>";
+                string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
-                string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.url+"')\" " +
-                    "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
-
-                if(number!=0) {
-                    string+="<a style=\"text-decoration:none\"  bannerId='"+data.id+"' onclick='banner_up(this)' href=\"javascript:;\" title=\"向上移动\"><i class=\"layui-icon\">&#xe619;</i></a>";
-                }
-                if(number!=(allNumber-1)) {
-                    string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick='banner_down(this)' href=\"javascript:;\" title=\"向下移动\"><i class=\"layui-icon\">&#xe61a;</i></a>";
-                }
                 string+="</td></tr>";
                 return string;
             }
@@ -79,7 +75,7 @@
             <span class="layui-breadcrumb">
               <a><cite>首页</cite></a>
               <a><cite>图片管理</cite></a>
-              <a><cite>轮播列表</cite></a>
+              <a><cite>PC首页各模块额外图片管理</cite></a>
             </span>
             <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
         </div>
@@ -87,14 +83,14 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./banner-add.html',500,450)">
-                <i class="layui-icon">&#xe608;</i>添加轮播图
+            <button type="button" class="layui-btn" onclick="banner_add('添加模块图片','./module-extra-picture-add.html',500,500)">
+                <i class="layui-icon">&#xe608;</i>添加模块图片
             </button>
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th>缩略图</th>
-                        <th>状态</th>
+                        <th>所属模块</th>
                         <th>链接地址</th>
                         <th>操作</th>
                     </tr>
@@ -103,9 +99,8 @@
                     <tr>
                         <td>1</td>
                         <td><img  src="./images/logo.png" width="100" alt="">点击图片试试</td>
-                        <td>已显示</td>
                         <td>
-                            <a title="修改" bannerId="1" href="javascript:;" onclick="banner_edit(1,'111','1000')" style="text-decoration:none"><i class="layui-icon">&#xe642;</i></a>
+                            <a title="修改" bannerId="1" href="javascript:;" onclick="banner_edit(1,'111','1000','111')" style="text-decoration:none"><i class="layui-icon">&#xe642;</i></a>
                             <button class="layui-btn  layui-btn-mini layui-btn-mini" onclick="return ok();">更改显示状态</button>
                             <button class="layui-btn layui-btn-danger layui-btn-mini" onclick="delete();" >删除</button>
                         </td>
@@ -187,10 +182,6 @@
                     });
                 });
             }
-            // 编辑
-            // function banner_edit (title,url,id,w,h) {
-            //     x_admin_show(title,url,w,h);
-            // }
             /*删除*/
             function banner_del(obj,id){
                 var bannerId=obj.getAttribute("bannerId");
@@ -198,11 +189,11 @@
                     //发异步删除数据
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/Banner/deleteBanner.do",
-                        data: {id:bannerId},
+                        url:  remoteURL+"/moduleExtraPicture/deleteModuleExtraPicture.do",
+                        data: {moduleExtraPictureID:bannerId},
                         dataType: "json",
                         success: function(data){
-                            if(data==1){
+                            if(data){
                                 $(obj).parents("tr").remove();
                                 init();
                                 layer.msg('已删除!',{icon:1,time:1000});
@@ -213,77 +204,26 @@
                     });
                 });
             }
-            function banner_up(obj) {
-                layer.confirm('确认要上移吗？',function(index){
-                    var bannerId=obj.getAttribute("bannerId");
-                    //发异步上传数据
-                    $.ajax({
-                        type: "POST",
-                        url:  remoteURL+"/Banner/upBanner.do",
-                        data: {id:bannerId},
-                        dataType: "json",
-                        success: function(data){
-                            if(data==1){
-                                init();
-                                layer.msg('已上移!',{icon:1,time:1000});
-                            } else {
-                                layer.msg("上移失败!",{icon:1,time:1000});
-                            }
-                        }
-                    });
-
-
-                });
-            }
-            function banner_down(obj) {
-                var bannerId=obj.getAttribute("bannerId");
-
-                layer.confirm('确认要下移吗？',function(index){
-                    //发异步上传数据
-                    $.ajax({
-                        type: "POST",
-                        url:  remoteURL+"/Banner/downBanner.do",
-                        data: {id:bannerId},
-                        dataType: "json",
-                        success: function(data){
-                            if(data==1){
-                                init();
-                                layer.msg('已下移!',{icon:1,time:1000});
-                            } else {
-                                layer.msg("下移失败!",{icon:1,time:1000});
-                            }
-                        }
-                    });
-                });
-            }
-            function banner_edit(id,image,url) {
+            function banner_edit(id,path,url,relativePath,moduleID) {
                 layui.use(['layer','form'],function () {
                     var layer = layui.layer;
                     layer.open({
                         type:2,
-                        title:"修改轮播图",
-                        content:"./banner-edit.html",
-                        area:['500px','400px'],
+                        title:"修改模块额外广告图",
+                        content:"./module-extra-picture-edit.html?moduleID="+moduleID,
+                        area:['500px','500px'],
                         success:function (layero, index) {
                             var body = layer.getChildFrame('body',index);
                             var form = layui.form;
                             body.find("#id").val(id);
-                            body.find("#image").attr("src",image);
+                            body.find("#image").attr("src",path);
                             body.find("#url").val(url);
+                            body.find("#path").val(relativePath);
                             form.render();
                         }
                     });
                 });
             }
         </script>
-        <!--<script>-->
-            <!--var _hmt = _hmt || [];-->
-            <!--(function() {-->
-              <!--var hm = document.createElement("script");-->
-              <!--hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";-->
-              <!--var s = document.getElementsByTagName("script")[0];-->
-              <!--s.parentNode.insertBefore(hm, s);-->
-            <!--})();-->
-        <!--</script>-->
     </body>
 </html>
