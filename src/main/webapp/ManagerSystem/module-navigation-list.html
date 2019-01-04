@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        文章类型列表
+        模块导航列表
     </title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,7 +18,7 @@
 <body>
 <div class="x-nav">
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-        <legend>首页 / 文章类型管理 / 文章类型列表</legend>
+        <legend>首页 / 文章管理 / 模块导航列表</legend>
     </fieldset>
     <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right"  href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:35px">&#xe9aa;</i>
@@ -27,7 +27,7 @@
 
 <div class="x-body">
     <xblock>
-        <button class="layui-btn layui-btn-normal" onclick="admin_add('添加文章类型','./articleType-add.html',460,430)">
+        <button class="layui-btn layui-btn-normal" onclick="admin_add('添加模块导航','./module-navigation-add.html',460,430)">
             <i class="layui-icon">&#xe608;</i>
             添加
         </button>
@@ -69,23 +69,20 @@
     layui.use(['element','layer','table','form'], function(){
         var table=layui.table;
         var layer=layui.layer;
+        var form=layui.form;
         // var element=layui.element;
         var token = sessionStorage.getItem("token");
-        var form = layui.form;
-        form.render();
 
         table.render({
             elem: '#article-list'
-            ,url:remoteURL+"/articleType/getAllArticleTypes.do"
+            ,url:remoteURL+"/moduleNavigation/getModuleNavigationsDeal.do"
             ,where:{
                 token:token
             }
-            ,page:true
             ,cols: [[
                 // {field:'id', title: 'ID',align:"center", sort: true}
-                {field:'type', title: '类型名',align:"center"}
-                ,{field:'url', title: '跳转链接',align:"center"}
-                ,{field:'moduleID', title: '类型模块',templet:function (data) {
+                {field:'name', title: '类型名',align:"center"}
+                ,{field:'moduleID',align:"center", title: '所属模块',templet:function (data) {
                         var result = "";
                         $.ajax({
                             type: "POST",
@@ -101,8 +98,10 @@
                         return result;
                     }
                 }
+                ,{field:'url', title: '跳转链接',align:"center"}
                 ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}
             ]]
+            ,page:true
             ,limits:['10']
         });
 
@@ -113,7 +112,10 @@
                 moduleID=data.value;
             
             table.reload('article-list', {
-                url:remoteURL+"/articleType/getAllArticleTypes.do"
+                url:remoteURL+"/moduleNavigation/getModuleNavigationsDeal.do"
+                ,page: {
+                    curr:1
+                }
                 ,where: {
                     moduleID:moduleID
                 }
@@ -130,12 +132,12 @@
                 window.open("./article-show.html?articleID="+data.id);
                 //do somehing
             } else if(layEvent === 'del'){ //删除
-                layer.confirm('如果类型删除，则该类型下的所有文章都会删除，是否继续?', function(index){
+                layer.confirm('是否要删除该模块导航?', function(index){
                     //向服务端发送删除指令
                     $.ajax({
                         type: "POST",
-                        url:  remoteURL+"/articleType/deleteArticleType.do?token="+sessionStorage.getItem("token"),
-                        data: {articleTypeID:data.id},
+                        url:  remoteURL+"/moduleNavigation/deletemoduleNavigation.do?token="+sessionStorage.getItem("token"),
+                        data: {moduleNavigationID:data.id},
                         dataType: "json",
                         success: function(res){
                             if(res.code==0) {
@@ -152,14 +154,14 @@
                 layer.open({
                     type:2,
                     title:"修改类型名称",
-                    content:"./articleType-edit.html",
+                    content:"./module-navigation-edit.html",
                     area:['460px','400px'],
                     success:function (layero, index) {
                         var body = layer.getChildFrame('body',index);
                         var form = layui.form;
                         if(data) {
                             body.find("#id").val(data.id);
-                            body.find("#type").val(data.type);
+                            body.find("#name").val(data.name);
                             body.find("#url").val(data.url);
                         }
                     }
@@ -173,7 +175,7 @@
                 $("#flag").attr("name",nameReload.val());
                 //执行重载
                 table.reload('admin-list', {
-                    url: remoteURL+"/articleType/getAllArticleTypes.do"
+                    url: remoteURL+"/moduleNavigation/getModuleNavigationsDeal.do"
                     ,where: {
                         name:nameReload.val()
                     }
@@ -191,11 +193,8 @@
 <script type="text/html" id="bar">
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>-->
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>-->
-    
-    {{#  if(d.type != "资讯"){ }}
     <a class="layui-btn layui-btn-xs " lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
-    {{#  } }}
 
     <!-- 这里同样支持 laytpl 语法，如： -->
     <!--{{#  if(d.id == 1){ }}-->
