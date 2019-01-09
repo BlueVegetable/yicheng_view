@@ -26,6 +26,7 @@
                 init(articleID);
             };
             function init(articleID) {
+                var typeID = null;
                 $.ajax({
                     type: "POST",
                     url:  remoteURL+"/article/getArticle.do",
@@ -33,11 +34,45 @@
                         articleID:articleID
                         ,token:sessionStorage.getItem("token")
                     },
+                    async:false,
                     dataType: "json",
                     success: function(res){
-                        console.log(res);
                         $("#title").val(res.data.title);
                         setContent(res.data.content);
+                        if(res.data.topest == 1) {
+                            $("#topest").attr("checked", "checked");
+                            layui.use('form',function() {
+                                var form = layui.form;
+                                form.render();
+                            });
+                        } 
+                    }
+                });
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/articleType/getArticleTypeByArticleID.do",
+                    data: {
+                        articleID:articleID
+                        ,token:sessionStorage.getItem("token")
+                    },
+                    async:false,
+                    dataType: "json",
+                    success: function(res){
+                        $("#articleTypeName").val(res.type);
+                        typeID = res.id;
+                    }
+                });
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/module/getModuleByTypeID.do",
+                    data: {
+                        typeID:typeID
+                        ,token:sessionStorage.getItem("token")
+                    },
+                    async:false,
+                    dataType: "json",
+                    success: function(res){
+                        $("#moduleName").val(res.moduleName);
                     }
                 });
             }
@@ -62,6 +97,24 @@
                         <div class="layui-input-inline">
                             <input id="title" type="text" style="width: 300px;" name="title" lay-verify="required" autocomplete="off" class="layui-input">
                         </div>
+                    </div>
+                </div>
+                <div class="layui-form-item" style="text-align: center">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">所属模块</label>
+                        <div class="layui-input-inline" style="z-index: 10;">
+                            <input id="moduleName" type="text" disabled="disabled" class="layui-input" />
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">文章类型</label>
+                        <div class="layui-input-inline">
+                            <input id="articleTypeName" type="text" disabled="disabled"  class="layui-input" />
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">是否置顶</label>
+                        <input id="topest" type="checkbox" name="topest" lay-skin="switch" lay-text="是|否">
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -91,7 +144,11 @@
             data.field.content=getContent();
             data.field.id=articleID;
             var token=sessionStorage.getItem("token");
-            console.log(JSON.stringify(data.field));
+            if(data.field.topest == null) {
+                data.field.topest = 0;
+            } else {
+                data.field.topest = 1;
+            }
             $.ajax({
                 type: "POST",
                 url:  remoteURL+"/article/updateArticle.do?token="+token,
