@@ -39,7 +39,7 @@
                 var string="";
                 var module = null;
                 string+="<tr>"+
-                    "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>点击图片试试"+"</td>";
+                    "<td>"+"<img  src="+remoteImageURL+data.path+" width='100' alt=''>"+"</td>";
                 // if(data.visible==1)
                 //     string+="<td class='td-status'><span class=\"layui-btn layui-btn-normal layui-btn-mini\">已显示</span></td>";
                 // else
@@ -70,14 +70,15 @@
                 //     string+= "<a style=\"text-decoration:none\" bannerId='"+data.id+"' onclick=\"banner_stop(this,id)\" href=\"javascript:;\" title=\"不显示\"><i class=\"layui-icon\">&#xe601;</i></a>";
                 // else
                 //     string+="<a style=\"text-decoration:none\" bannerId='"+data.id+"' onClick=\"banner_start(this,id)\" href=\"javascript:;\" title=\"显示\"><i class=\"layui-icon\">&#xe62f;</i></a>";
+                
+                string+="<a class=\"layui-btn  layui-btn-mini layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
+                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.location+"','"+data.url+"','"+data.path+"')\" " +
+                    ">修改</a>"
 
-                string+= "<a title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe640;</i></a>";
+                string+= "<a bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" class=\"layui-btn layui-btn-danger layui-btn-mini\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
-                string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.path+"','"+data.location+"','"+data.url+"','"+data.path+"')\" " +
-                    "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>"
 
                 // if(number!=0) {
                 //     string+="<a style=\"text-decoration:none\"  bannerId='"+data.id+"' onclick='banner_up(this)' href=\"javascript:;\" title=\"向上移动\"><i class=\"layui-icon\">&#xe619;</i></a>";
