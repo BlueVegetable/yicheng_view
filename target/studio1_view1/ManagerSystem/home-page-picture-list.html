@@ -50,13 +50,14 @@
 
                 string+= "<td class='td-manage'>";
 
-                string+= "<a title=\"删除\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe640;</i></a>";
+                string+="<a class=\"layui-btn layui-btn-mini layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
+                "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.image+"','"+data.url+"','"+data.image+"')\" " +
+                ">修改</a>";
+
+                string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
-                string+="<a title=\"修改\" bannerId=\"1\" href=\"javascript:;\" " +
-                    "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.image+"','"+data.url+"','"+data.image+"')\" " +
-                    "style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
                 string+="</td></tr>";
                 return string;
             }

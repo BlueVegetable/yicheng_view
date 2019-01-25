@@ -37,7 +37,7 @@
         <!--<div id="flag" name=""></div>-->
     <!--</div>-->
     <div class="layui-form">
-        <div class="layui-form-item">
+        <div class="layui-form-item" style="text-align:center">
             <div class="layui-inline">
                 <div class="layui-input-inline">
                     <input type="text" name="title" placeholder="查找文章标题" id="title" class="layui-input"  autocomplete="off">
@@ -119,8 +119,7 @@
                 token:token
             }
             ,cols: [[
-                {field:'id', title: 'ID',align:"center", sort: true}
-                ,{field:'title', title: '文章名',align:"center"}
+                {field:'title', title: '文章名',align:"center"}
                 ,{field:'typeID',align:'center', title: '文章类型',templet:function (data) {
                         var result = "";
                         $.ajax({
@@ -138,11 +137,19 @@
                         return result;
                     }
                 }
-                ,{field:'lastModify', title: '最后修改时间', templet:function (data) {
+                ,{field:'lastModify', title: '最后修改时间',align:'center', templet:function (data) {
                         var date = new Date(data.lastModify);
                         return date.getFullYear()+"年"+(date.getMonth()+1)+"月"
                             +date.getDate()+"日"+"   "+date.getHours()+"时"
                             +date.getMinutes()+"分"+date.getSeconds()+"秒";
+                    }
+                }
+                ,{field:'topest', title: '是否置顶',align:'center',templet:function(data) {
+                        if(data.topest!=null&&data.topest==1) {
+                            return "是";
+                        } else {
+                            return "否";
+                        }
                     }
                 }
                 ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}

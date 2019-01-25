@@ -30,8 +30,9 @@
         UEDITOR_HOME_URL: URL
 
         // 服务器统一请求接口路径
-		// ,serverUrl : "http://114.67.130.29/yicheng/ueditor/server.do"
-        ,serverUrl : "http://admin.gdutnw.site/yicheng/ueditor/server.do"
+		// ,serverUrl : "http://106.13.32.172:8081/yicheng/ueditor/server.do"
+		,serverUrl : "http://119.23.174.31:8080/yicheng/ueditor/server.do"
+        // ,serverUrl : "http://admin.gdutnw.site:8081/yicheng/ueditor/server.do"
 		// , serverUrl: "http://localhost:80/yicheng/ueditor/server.do"
         // , serverUrl: "http://192.168.1.101:8081/yicheng/ueditor/server.do"
 
@@ -297,7 +298,7 @@
         //,toolbarTopOffset:400
 
         //设置远程图片是否抓取到本地保存
-        //,catchRemoteImageEnable: true //设置是否抓取远程图片
+        ,catchRemoteImageEnable: false //设置是否抓取远程图片
 
         //pageBreakTag
         //分页标识符,默认是_ueditor_page_break_tag_

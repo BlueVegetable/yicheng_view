@@ -59,7 +59,7 @@
             ,url:remoteURL+"/video/getVideosDeal.do?token="+token
             ,page:true
             ,cols: [[
-                // {field:'id', title: 'ID',align:"center", sort: true}
+                // {field:'id', title: 'ID',align:"center", sort: true},
                 {field:'name', title: '视频名称',align:"center"}
                 ,{field:'url', title: '视频链接',align:"center"}
                 ,{title: '所属课程',align:"center",templet:function (data) {
@@ -78,7 +78,25 @@
                         return result;
                     }
                 }
-                ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}
+                ,{title: '是否存在文章介绍',align:'center',templet:function(data) {
+                        var result = "";
+                        $.ajax({
+                            type: "POST",
+                            url:  remoteURL+"/videoIntroduce/getVideoIntroduceByVideoID.do",
+                            data: {videoID:data.id},
+                            dataType: "json",
+                            async: false,
+                            success: function(res){
+                                if(res.code == 0)
+                                    result = "存在";
+                                else
+                                    result = "不存在";
+                            }
+                        });
+                        return result;
+                    }
+                }
+                ,{align:'center',class:"jdk", width:250, toolbar: '#bar',title:'操作'}
             ]]
             ,limits:['10']
         });
@@ -128,6 +146,22 @@
                         }
                     }
                 });
+            } else if(layEvent === 'edit_introduce') {
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/videoIntroduce/getVideoIntroduceByVideoID.do?",
+                    data: {videoID:data.id},
+                    dataType: "json",
+                    success: function(res) {
+                        if(res.code==0) {
+                            var tab = parent.document.getElementById("video_introduce_edit");
+                            tab.setAttribute("_href","./video-introduce-edit.html?videoIntroduceID="+res.data.id);
+                            tab.click();
+                        } else {
+                            layer.msg("文章介绍不存在，请先创建");
+                        }
+                    }
+                });
             }
         });
 
@@ -153,9 +187,10 @@
     });
 </script>
 <script type="text/html" id="bar">
-    <!--<a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>-->
+    <!-- <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a> -->
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>-->
-    <a class="layui-btn layui-btn-xs " lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">编辑视频</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit_introduce">修改视频介绍</a>
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
 
     <!-- 这里同样支持 laytpl 语法，如： -->

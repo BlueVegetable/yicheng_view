@@ -1,6 +1,10 @@
 //上线服务器
-var remoteURL="http://114.67.130.29/yicheng";
-var remoteImageURL = "http://114.67.130.29/upload";
+// var remoteURL="http://106.13.32.172:8081/yicheng";
+// var remoteImageURL = "http://106.13.32.172:8081/upload";
+
+//逸城服务器
+var remoteURL="http://119.23.174.31:8080/yicheng";
+var remoteImageURL = "http://119.23.174.31:8080/upload";
 
 // var remoteURL="http://localhost:80/studio1";
 // var remoteImageURL = "http://localhost:80/upload";

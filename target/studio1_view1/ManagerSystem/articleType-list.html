@@ -33,14 +33,15 @@
         </button>
         <span class="x-right" style="line-height:40px"></span>
     </xblock>
-    <div class="layui-form-item" style="text-align: center">
-        <!--<div class="layui-inline">-->
-            <!--<div class="layui-input-inline">-->
-                <!--<input type="text" name="name" placeholder="通过管理员名字查找" id="nameReload" class="layui-input"  autocomplete="off">-->
-            <!--</div>-->
-        <!--</div>-->
-        <div class="layui-inline">
-            <!--<button class="layui-btn layui-btn-radius layui-btn-normal" data-type="reload" id="select"><i class="layui-icon">&#xe615;</i></button>-->
+    <div class="layui-form">
+        <div class="layui-form-item" style="text-align: center">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <select id="module" name="module" lay-filter="module" lay-search="">
+                        <option value="">全部</option>
+                    </select>
+                </div>
+            </div>
         </div>
     </div>
     <table class="layui-hide" id="article-list" lay-filter="bar" ></table>
@@ -48,11 +49,30 @@
 
 <script src="./layui/layui.js" charset="utf-8"></script>
 <script>
-    layui.use(['element','layer','table'], function(){
+    $.ajax({
+        type: "POST",
+        url:  remoteURL+"/module/getAllModules.do",
+        data: {},
+        dataType: "json",
+        success: function(res){
+            $("#module").html("");
+            $("#module").append("<option value='-1'>全部</option>");
+            for (var i = 0; i < res.length; i++) {
+                $("#module").append("<option value='"+res[i].id+"'>"+res[i].moduleName+"</option>");
+            }
+            layui.use('form',function () {
+                var form = layui.form;
+                form.render();
+            });
+        }
+    });
+    layui.use(['element','layer','table','form'], function(){
         var table=layui.table;
         var layer=layui.layer;
         // var element=layui.element;
         var token = sessionStorage.getItem("token");
+        var form = layui.form;
+        form.render();
 
         table.render({
             elem: '#article-list'
@@ -60,6 +80,7 @@
             ,where:{
                 token:token
             }
+            ,page:true
             ,cols: [[
                 // {field:'id', title: 'ID',align:"center", sort: true}
                 {field:'type', title: '类型名',align:"center"}
@@ -82,6 +103,21 @@
                 }
                 ,{align:'center',class:"jdk", toolbar: '#bar',title:'操作'}
             ]]
+            ,limits:['10']
+        });
+
+        form.on('select(module)',function (data) {
+            console.log(data.value);
+            var moduleID=null;
+            if(data.value != -1)
+                moduleID=data.value;
+            
+            table.reload('article-list', {
+                url:remoteURL+"/articleType/getAllArticleTypes.do"
+                ,where: {
+                    moduleID:moduleID
+                }
+            });
         });
 
         table.on('tool(bar)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
@@ -155,8 +191,11 @@
 <script type="text/html" id="bar">
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a>-->
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>-->
+    
+    {{#  if(d.type != "资讯"){ }}
     <a class="layui-btn layui-btn-xs " lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    {{#  } }}
 
     <!-- 这里同样支持 laytpl 语法，如： -->
     <!--{{#  if(d.id == 1){ }}-->

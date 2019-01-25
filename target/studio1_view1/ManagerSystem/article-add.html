@@ -78,6 +78,10 @@
                             </select>
                         </div>
                     </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label">是否置顶</label>
+                        <input type="checkbox" name="topest" lay-skin="switch" lay-text="是|否">
+                    </div>
                 </div>
                 <div class="layui-form-item">
                     <!-- 加载编辑器的容器 -->
@@ -125,8 +129,12 @@
         form.on('submit(demo1)', function(data){
             data.field.content = getContent();
             data.field.brief = getContentTxt();
+            if(data.field.topest == null) {
+                data.field.topest = 0;
+            } else {
+                data.field.topest = 1;
+            }
             var token=sessionStorage.getItem("token");
-            console.log(JSON.stringify(data.field));
             $.ajax({
                 type: "POST",
                 url:  remoteURL+"/article/addArticle.do?token="+token,
