@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="./layui/css/layui.css" media="all">
     <script src="./js/url.js" charset="utf-8"></script>
     <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/function.js"></script>
+    <script>
+        var courseID = getParameter(window.location.href,"id");
+    </script>
 </head>
 <body>
 <div class="x-nav">
@@ -27,7 +31,7 @@
 
 <div class="x-body">
     <xblock>
-        <button class="layui-btn layui-btn-normal" onclick="admin_add('添加视频','./video-add.html',500,500)">
+        <button class="layui-btn layui-btn-normal" onclick="admin_add('添加视频','./video-add.html?courseID='+courseID,500,500)">
             <i class="layui-icon">&#xe608;</i>
             添加
         </button>
@@ -56,7 +60,7 @@
 
         table.render({
             elem: '#article-list'
-            ,url:remoteURL+"/video/getVideosDeal.do?token="+token
+            ,url:remoteURL+"/video/getVideosDeal.do?token="+token+"&courseID="+courseID
             ,page:true
             ,cols: [[
                 // {field:'id', title: 'ID',align:"center", sort: true},
@@ -78,24 +82,24 @@
                         return result;
                     }
                 }
-                ,{title: '是否存在文章介绍',align:'center',templet:function(data) {
-                        var result = "";
-                        $.ajax({
-                            type: "POST",
-                            url:  remoteURL+"/videoIntroduce/getVideoIntroduceByVideoID.do",
-                            data: {videoID:data.id},
-                            dataType: "json",
-                            async: false,
-                            success: function(res){
-                                if(res.code == 0)
-                                    result = "存在";
-                                else
-                                    result = "不存在";
-                            }
-                        });
-                        return result;
-                    }
-                }
+                // ,{title: '是否存在文章介绍',align:'center',templet:function(data) {
+                //         var result = "";
+                //         $.ajax({
+                //             type: "POST",
+                //             url:  remoteURL+"/videoIntroduce/getVideoIntroduceByVideoID.do",
+                //             data: {videoID:data.id},
+                //             dataType: "json",
+                //             async: false,
+                //             success: function(res){
+                //                 if(res.code == 0)
+                //                     result = "存在";
+                //                 else
+                //                     result = "不存在";
+                //             }
+                //         });
+                //         return result;
+                //     }
+                // }
                 ,{align:'center',class:"jdk", width:250, toolbar: '#bar',title:'操作'}
             ]]
             ,limits:['10']
@@ -133,7 +137,7 @@
                 layer.open({
                     type:2,
                     title:"修改类型名称",
-                    content:"./video-edit.html",
+                    content:"./video-edit.html?id="+courseID,
                     area:['500px','400px'],
                     success:function (layero, index) {
                         var body = layer.getChildFrame('body',index);
@@ -190,7 +194,7 @@
     <!-- <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="detail">查看</a> -->
     <!--<a class="layui-btn layui-btn-xs layui-btn-normal" href="./article-add.html" _href="./article-add.html">查看</a>-->
     <a class="layui-btn layui-btn-xs layui-btn-normal" lay-event="edit">编辑视频</a>
-    <a class="layui-btn layui-btn-xs" lay-event="edit_introduce">修改视频介绍</a>
+    <!-- <a class="layui-btn layui-btn-xs" lay-event="edit_introduce">修改视频介绍</a> -->
     <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
 
     <!-- 这里同样支持 laytpl 语法，如： -->

@@ -14,24 +14,22 @@
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/url.js" charset="utf-8"></script>
     <script src="./layui/layui.js" charset="utf-8"></script>
+    <script src="./js/function.js"></script>
     <script>
-        $.ajax({
-            type: "POST",
-            url:  remoteURL+"/courseModule/getAllCourseModules.do",
-            data: {},
-            dataType: "json",
-            success: function(res){
-                $("#moduleID").html("");
-                $("#moduleID").append("<option value=''>请先选择模块</option>");
-                for (var i = 0; i < res.length; i++) {
-                    $("#moduleID").append("<option value='"+res[i].id+"'>"+res[i].courseModuleName+"</option>");
+        var courseID = getParameter(window.location.href,"courseID");
+        window.onload = function() {
+            $.ajax({
+                type: "POST",
+                url:  remoteURL+"/course/getCourseByID.do",
+                data: {courseID:courseID},
+                dataType: "json",
+                success: function(res){
+                    console.log(res);
+                    $("#courseName").val(res.data.title);
+                    $("#courseID").val(res.data.id)
                 }
-                layui.use('form',function () {
-                    var form = layui.form;
-                    form.render();
-                });
-            }
-        });
+            });
+        }
     </script>
 </head>
 <body>
@@ -48,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="layui-form-item">
+    <!-- <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">课程模块</label>
             <div class="layui-input-inline" style="width:300px">
@@ -67,14 +65,13 @@
                 </select>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">所属课程</label>
             <div class="layui-input-inline" style="width:300px">
-                <select id="courseID" name="courseID" lay-verify="courseID" lay-search="" style="z–index:10">
-                    <option value="">请先选择所属课程</option>
-                </select>
+                <input id="courseName" type="text" disabled="disabled" class="layui-input"/>
+                <input id="courseID" type="hidden" name="courseID" />
             </div>
         </div>
     </div>
@@ -161,7 +158,7 @@
                     if(data.code==0) {
                         var table=parent.layui.table;
                         table.reload('article-list', {
-                            url:remoteURL+"/video/getVideosDeal.do"
+                            url:remoteURL+"/video/getVideosDeal.do?courseID="+courseID
                         });
                         layer.alert("添加成功", {icon: 6},function () {
                             // 获得frame索引

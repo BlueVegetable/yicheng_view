@@ -46,16 +46,43 @@
                     string+="<td><img  src="+data.imgUrl+" width='100' alt=''>"+"</td>";
                 
                 var date = new Date(data.date);
-                string+="<td>"+date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日"+"</td>";
+                string+="<td>"+date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日"+"</td>";
+
+                string+="<td>"+hasArticle(data.id)+"</td>";
 
                 string+= "<td class='td-manage'>";
 
-                string+="<a class=\"layui-btn layui-btn-mini layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
-                "onclick=\"banner_edit("+data.id+",'"+data.imgUrl+"','"+data.title+"')\" " +
+                string+="<a class=\"layui-btn layui-btn-normal layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
+                "onclick=\"banner_show('"+data.id+"')\" " +
+                ">查看视频</a>"
+
+                string+="<a class=\"layui-btn layui-btn-primary layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
+                "onclick=\"banner_edit('"+data.id+"')\" " +
                 ">修改</a>"
 
-                string+="</tr>";
+                string+="<a class=\"layui-btn layui-btn-mini layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
+                "onclick=\"banner_introduce_edit("+data.id+")\" " +
+                ">修改课程介绍</a>"
+
+                string+="</td></tr>";
                 return string;
+            }
+            function hasArticle(id) {
+                var result = "";
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/videoIntroduce/getVideoIntroduceByCourseID.do",
+                    data: {courseID:id},
+                    dataType: "json",
+                    async: false,
+                    success: function(res){
+                        if(res.code == 0)
+                            result = "存在";
+                        else
+                            result = "不存在";
+                    }
+                });
+                return result;
             }
         </script>
     </head>
@@ -72,8 +99,8 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <!-- <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./banner-add.html',500,450)">
-                <i class="layui-icon">&#xe608;</i>添加轮播图
+            <!-- <button type="button" class="layui-btn" onclick="banner_add('添加轮播图','./course-add.html',900,550)">
+                <i class="layui-icon">&#xe608;</i>添加课程
             </button> -->
             <table class="layui-table">
                 <thead>
@@ -81,6 +108,7 @@
                         <th>课程标题</th>
                         <th>缩略图</th>
                         <th>开课时间</th>
+                        <th>是否存在文章介绍</th>
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -241,28 +269,72 @@
                     });
                 });
             }
-            function banner_edit(id,image,title) {
-                var flag = image.indexOf("https")==0||image.indexOf("http")==0;
+            function banner_show(id) {
+                // var flag = image.indexOf("https")==0||image.indexOf("http")==0;
                 layui.use(['layer','form'],function () {
                     var layer = layui.layer;
                     layer.open({
                         type:2,
                         title:"修改课程信息",
-                        content:"./course-edit.html",
-                        area:['500px','550px'],
+                        content:"./video-list.html?id="+id,
+                        area:['900px','500px'],
                         success:function (layero, index) {
-                            var body = layer.getChildFrame('body',index);
-                            var form = layui.form;
-                            body.find("#id").val(id);
-                            body.find("#title").val(title);
-                            if(flag) {
-                                body.find("#image").attr("src",image);
-                            } else {
-                                body.find("#image").attr("src",remoteImageURL+image);
-                            }
-                            form.render();
+                            // var body = layer.getChildFrame('body',index);
+                            // var form = layui.form;
+                            // body.find("#id").val(id);
+                            // body.find("#title").val(title);
+                            // if(flag) {
+                            //     body.find("#image").attr("src",image);
+                            // } else {
+                            //     body.find("#image").attr("src",remoteImageURL+image);
+                            // }
+                            // form.render();
                         }
                     });
+                });
+            }
+            function banner_edit(id) {
+                // var flag = image.indexOf("https")==0||image.indexOf("http")==0;
+                layui.use(['layer','form'],function () {
+                    var layer = layui.layer;
+                    layer.open({
+                        type:2,
+                        title:"修改课程信息",
+                        content:"./course-edit.html?id="+id,
+                        area:['900px','500px'],
+                        success:function (layero, index) {
+                            // var body = layer.getChildFrame('body',index);
+                            // var form = layui.form;
+                            // body.find("#id").val(id);
+                            // body.find("#title").val(title);
+                            // if(flag) {
+                            //     body.find("#image").attr("src",image);
+                            // } else {
+                            //     body.find("#image").attr("src",remoteImageURL+image);
+                            // }
+                            // form.render();
+                        }
+                    });
+                });
+            }
+            function banner_introduce_edit(id) {
+                $.ajax({
+                    type: "POST",
+                    url:  remoteURL+"/videoIntroduce/getVideoIntroduceByCourseID.do?",
+                    data: {courseID:id},
+                    dataType: "json",
+                    success: function(res) {
+                        if(res.code==0) {
+                            var tab = parent.document.getElementById("video_introduce_edit");
+                            tab.setAttribute("_href","./video-introduce-edit.html?videoIntroduceID="+res.data.id);
+                            tab.click();
+                        } else {
+                            layui.use('layer',function() {
+                                var layer = layui.layer;
+                                layer.msg("文章介绍不存在，请先创建");
+                            })
+                        }
+                    }
                 });
             }
         </script>

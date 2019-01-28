@@ -79,14 +79,6 @@
                             </select>
                         </div>
                     </div>
-                    <div class="layui-inline">
-                        <label class="layui-form-label">所属视频</label>
-                        <div class="layui-input-inline" style="z-index: 10;">
-                            <select id="video" name="videoID" lay-verify="required" lay-search="" style="z–index:10">
-                                <option value=''>请选择视频</option>
-                            </select>
-                        </div>
-                    </div>
                 </div>
                 <div class="layui-form-item">
                     <!-- 加载编辑器的容器 -->
@@ -131,33 +123,9 @@
                 }
             });
         });
-        form.on('select(course)',function (data) {
-            $.ajax({
-                type: "POST",
-                url:  remoteURL+"/video/getVideosByCourseIDWithIntroduce.do",
-                data: {courseID:data.value},
-                dataType: "json",
-                success: function(res){
-                    $("#video").html("");
-                    $("#video").append("<option value=''>请选择视频</option>");
-                    for (var i = 0; i < res.length; i++) {
-                        $("#video").append("<option value='"+res[i].id+"'>"+res[i].name+"</option>");
-                    }
-                    layui.use('form',function () {
-                        var form = layui.form;
-                        form.render();
-                    });
-                }
-            });
-        });
         form.on('submit(demo1)', function(data){
             data.field.content = getContent();
             data.field.brief = getContentTxt();
-            if(data.field.topest == null) {
-                data.field.topest = 0;
-            } else {
-                data.field.topest = 1;
-            }
             var token=sessionStorage.getItem("token");
             $.ajax({
                 type: "POST",

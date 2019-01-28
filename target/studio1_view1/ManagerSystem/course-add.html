@@ -15,61 +15,10 @@
     <script src="./js/url.js" charset="utf-8"></script>
     <script src="./layui/layui.js" charset="utf-8"></script>
     <script src="./js/function.js" charset="utf-8"></script>
-    <script>
-        var id = null;
-        window.onload=function() {
-            id = getParameter(window.location.href,"id");
-            $.ajax({
-                type: "POST",
-                url:  remoteURL+"/course/getCourseByID.do",
-                data: {courseID:id},
-                dataType: "json",
-                success: function(res){
-                    var course = res.data;
-                    if(course!=null) {
-                        $("#id").val(course.id);
-                        $("#title").val(course.title);
-                        var date = new Date(course.date);
-                        var month = date.getMonth();
-                        var riqi =  date.getDate();
-                        if(month+1<10) month = "0"+(month+1);
-                        if(riqi<10) riqi = "0"+riqi;
-                        $("#date1").val(date.getFullYear()+"-"+month+"-"+riqi);
-                        var flag = false;
-                        var image = course.imgUrl;
-                        flag = image.indexOf("https")==0||image.indexOf("http")==0;
-                        if(!flag) {
-                            $("#image").attr("src",remoteImageURL+image);
-                        } else {
-                            $("#image").attr("src",image);
-                        }
-                        $("#path").val(image);
-                        image = course.teacherPic1;
-                        flag = image.indexOf("https")==0||image.indexOf("http")==0;
-                        if(!flag) {
-                            $("#teacher1_image").attr("src",remoteImageURL+image);
-                        } else {
-                            $("#teacher1_image").attr("src",image);
-                        }
-                        $("#teacherPic1").val(course.teacherPic1);
-                        image = course.teacherPic2;
-                        flag = image.indexOf("https")==0||image.indexOf("http")==0;
-                        if(!flag) {
-                            $("#teacher2_image").attr("src",remoteImageURL+image);
-                        } else {
-                            $("#teacher2_image").attr("src",image);
-                        }
-                        $("#teacherPic2").val(course.teacherPic2);
-                        $("#teacher").val(course.teacher);
-                    }
-                }
-            });
-        }
-    </script>
 </head>
 <body>
 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-    <legend>修改课程信息</legend>
+    <legend>添加课程</legend>
 </fieldset>
 
 <form class="layui-form">
@@ -78,7 +27,7 @@
         <!-- <div class="layui-inline"> -->
             <label class="layui-form-label" style="width:80px">课程标题</label>
             <div class="layui-input-block" style="z-index: 10;">
-                <input id="title" type="text" lay-verify="required" name="title" autocomplete="off" class="layui-input">
+                <input id="title" type="text" name="title" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
         <!-- </div> -->
     </div>
@@ -86,7 +35,7 @@
         <div class="layui-inline">
             <label class="layui-form-label" style="width:80px">讲师名称</label>
             <div class="layui-input-inline" style="z-index: 10;">
-                <input type="text" name="teacher" lay-verify="required" id="teacher" autocomplete="off" class="layui-input">
+                <input type="text" name="teacher" id="teacher" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>
@@ -94,7 +43,7 @@
         <div class="layui-inline">
             <label class="layui-form-label" style="width:80px">开课时间</label>
             <div class="layui-input-inline" style="z-index: 10;">
-                <input type="text" name="date" lay-verify="required" id="date1" autocomplete="off" class="layui-input">
+                <input type="text" name="date" id="date1" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>
@@ -130,12 +79,10 @@
         <div class="layui-inline">
             <label class="layui-form-label" style="width:80px">讲师图片</label>
             <div class="layui-input-inline">
-                <img id="teacher1_image" 
-                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548698186083&di=800c3d325e21603c017b19b15c98153e&imgtype=0&src=http%3A%2F%2Fi0.hdslb.com%2Fbfs%2Farticle%2Fcff3b356e9a28f2f0242c9429737c8a211099c05.jpg" width="150px;">
+                <img id="teacher1_image" src="" width="150px;">
             </div>
             <div class="layui-input-inline">
-                <img id="teacher2_image" 
-                src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548698187739&di=eb061fb213dc01c40cbf9485e4430e91&imgtype=0&src=http%3A%2F%2Fi2.hdslb.com%2Fbfs%2Farchive%2F412a569ad8d8ac2ba04bdd573caef5edf2ba376f.jpg" width="150px;">
+                <img id="teacher2_image" src="" width="150px;">
             </div>
         </div>
     </div>
@@ -242,7 +189,7 @@
             var token = sessionStorage.getItem('token');
             $.ajax({
                 type: "POST",
-                url:  remoteURL+"/course/updateCourse.do",
+                url:  remoteURL+"/course/addCourse.do",
                 contentType:"application/json;charset=utf-8",
                 data: JSON.stringify(data.field),
                 dataType: "json",
