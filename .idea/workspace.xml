@@ -8,20 +8,622 @@
   <component name="ChangeListManager">
     <list default="true" id="7ab847e2-8c7c-4291-ba93-462fa7ff8f66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/course-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/course-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/course-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/course-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-introduce-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-introduce-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-introduce-add.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-introduce-add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/yicheng_view.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/yicheng_view.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/home-page-picture-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-extra-picture-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-picture-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/module-picture-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/profession-course-picture-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ManagerSystem/profession-course-picture-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/address-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/address-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/address-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/admin-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/admin-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/admin-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/article-show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/articleType-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/articleType-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/articleType-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/articleType-picture-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/articleType-picture-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/articleType-picture-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-pc-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-pc-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-pc-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/banner-show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-college-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-first-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-guangzhou-residence-ask-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-guangzhou-residence-simple-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-option-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-pc-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-residence-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-statistics.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-tea-specialist-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-tea-specialist-simple-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-work-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/consult-work-simple-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/course-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/css/404.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/css/component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/css/x-admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/education-level-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/education-level-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/home-page-picture-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/home-page-picture-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/home-page-picture-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/home_page_banner-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/home_page_banner-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/home_page_banner-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/images/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/img/404_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/img/404_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/img/consult-educationLevel-professionCourse.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/img/demo-1-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/img/login_ico.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/EasePack.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/TweenLite.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/demo-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/echarts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/jquery-3.1.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/rAF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/url.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/x-admin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/js/x-layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/layui/小笔记.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/laydate/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/laydate/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/dest/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/lib/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/manager.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-extra-picture-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-navigation-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-navigation-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-navigation-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-picture-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-picture-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/module-picture-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/profession-course-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/profession-course-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/profession-course-picture-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/profession-course-picture-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/profession-course-picture-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/sys-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/sys-link.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/sys-log.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/sys-qq.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/sys-set.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/sys-shield.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/teacher-list2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/anchor/anchor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/attachment.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/attachment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_chm.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_doc.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_exe.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_jpg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_mp3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_mv.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_ppt.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_psd.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_rar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_txt.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/fileTypeImages/icon_xls.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/alignicon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/alignicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/file-icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/file-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/attachment/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/background/background.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/background/background.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/background/background.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/background/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/background/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/chart.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/charts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/images/charts0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/images/charts1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/images/charts2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/images/charts3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/images/charts4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/charts/images/charts5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/emotion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/emotion.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/emotion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/bface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/cface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/fface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/jxface2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/neweditor-tab-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/tface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/wface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/emotion/images/yface.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/gmap/gmap.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/help/help.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/help/help.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/help/help.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/alignicon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/image/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/insertframe/insertframe.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/internal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/link/link.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/map/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/map/show.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/music/music.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/music/music.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/music/music.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/preview/preview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/addimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/brush.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/delimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/delimgH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/empty.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/emptyH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/eraser.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/redo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/redoH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/scaleH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/size.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/undo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/images/undoH.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/scrawl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/scrawl.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/scrawl/scrawl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/searchreplace/searchreplace.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/searchreplace/searchreplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/snapscreen/snapscreen.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/spechars/spechars.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/spechars/spechars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/table/dragicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/table/edittable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/table/edittable.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/table/edittable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/table/edittd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/table/edittip.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/images/bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/images/pre0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/images/pre1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/images/pre2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/images/pre3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/images/pre4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/template.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/template/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/center_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/file-icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/file-icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/left_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/none_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/progress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/right_focus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/success.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/images/success.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/video/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/webapp/webapp.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/wordimage/fClipboard_ueditor.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/wordimage/imageUploader.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/wordimage/tangram.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/wordimage/wordimage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/dialogs/wordimage/wordimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/jsp/lib/commons-codec-1.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/jsp/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/jsp/lib/commons-io-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/jsp/lib/json.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/jsp/lib/ueditor-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/addimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/alldeletebtnhoverskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/alldeletebtnupskin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/deletedisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/deleteenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/listbackground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/localimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/rotateleftdisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/rotateleftenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/rotaterightdisable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/rotaterightenable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/en/images/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/zh-cn/images/copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/zh-cn/images/localimage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/zh-cn/images/music.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/zh-cn/images/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/lang/zh-cn/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/css/ueditor.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/css/ueditor.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/dialogbase.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/anchor.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/arrow_down.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/arrow_up.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/button-bg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/cancelbutton.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/charts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/cursor_h.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/cursor_h.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/cursor_v.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/cursor_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/dialog-title-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/filescan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/highlighted.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/icons-all.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/icons.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/icons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/loaderror.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/lock.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/neweditor-tab-bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/pagebreak.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/scale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/sortable.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/sparator_v.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/table-cell-align.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/tangram-colorpicker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/toolbar_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/unhighlighted.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/upload.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/videologo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/word.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/default/images/wordpaste.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/themes/iframe.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/SyntaxHighlighter/shCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/codemirror/codemirror.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/codemirror/codemirror.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/adapters/mootools-adapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/adapters/mootools-adapter.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/adapters/prototype-adapter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/adapters/prototype-adapter.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/adapters/standalone-framework.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/adapters/standalone-framework.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/highcharts-more.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/highcharts-more.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/highcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/highcharts.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/annotations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/annotations.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/canvas-tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/canvas-tools.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/data.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/drilldown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/drilldown.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/exporting.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/exporting.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/funnel.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/heatmap.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/map.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/no-data-to-display.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/modules/no-data-to-display.src.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/themes/dark-blue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/themes/dark-green.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/themes/gray.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/themes/grid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/highcharts/themes/skies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/jquery-1.10.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/jquery-1.10.2.min.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/snapscreen/UEditorSnapscreen.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/font/vjs.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/font/vjs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/font/vjs.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/font/vjs.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/video-js.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/video-js.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/video-js.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/video.dev.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/video-js/video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/Uploader.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.custom.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.flashonly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.flashonly.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.html5only.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.html5only.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.withoutimage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/webuploader/webuploader.withoutimage.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/xss.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/zeroclipboard/ZeroClipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/zeroclipboard/ZeroClipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/third-party/zeroclipboard/ZeroClipboard.swf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/ueditor/ueditor.parse.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/upimg.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/upload.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-introduce-add.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-introduce-edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/video-list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/ManagerSystem/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/studio1_view1/index.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,19 +637,17 @@
     <favorites_list name="studio1_view1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/course-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="303" column="41" selection-start-line="303" selection-start-column="41" selection-end-line="303" selection-end-column="41" />
+            <state relative-caret-position="146">
+              <caret line="230" column="51" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
@@ -227,31 +827,13 @@
             <path>
               <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
               <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="ManagerSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="ManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="studio1_view1" type="b2602c69:ProjectViewProjectNode" />
               <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="studio1_view1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,7 +846,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548694948375" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550497071357" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -557,17 +1139,20 @@
       <workItem from="1548523018228" duration="288000" />
       <workItem from="1548659084500" duration="40000" />
       <workItem from="1548694472564" duration="856000" />
+      <workItem from="1548859060034" duration="98000" />
+      <workItem from="1548946729197" duration="66000" />
+      <workItem from="1548947076528" duration="146000" />
+      <workItem from="1550496498430" duration="1151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196664000" />
+    <option name="totallyTimeSpent" value="198125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49914822" visible="true" weight="0.2931818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -928,14 +1513,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/video-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ManagerSystem/course-list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="303" column="41" selection-start-line="303" selection-start-column="41" selection-end-line="303" selection-end-column="41" />
+        <state relative-caret-position="146">
+          <caret line="230" column="51" selection-start-line="230" selection-start-column="51" selection-end-line="230" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />

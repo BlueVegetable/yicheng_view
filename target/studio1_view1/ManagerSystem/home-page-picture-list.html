@@ -42,19 +42,14 @@
                 if(data.url==null)
                     data.url="";
                 string+="<td>"+data.url+"</td>";
-                if(data.topest) {
-                    string+="<td>是</td>";
-                } else {
-                    string+="<td>不是</td>";
-                }
 
-                string+= "<td class='td-manage'>";
+                string+= "<td class='td-manage' style='text-align:center'>";
 
-                string+="<a class=\"layui-btn layui-btn-mini layui-btn-mini\" bannerId=\"1\" href=\"javascript:;\" " +
+                string+="<a class=\"layui-btn\" bannerId=\"1\" href=\"javascript:;\" " +
                 "onclick=\"banner_edit("+data.id+",'"+remoteImageURL+data.image+"','"+data.url+"','"+data.image+"')\" " +
-                ">修改</a>";
+                ">修改图片</a>";
 
-                string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\">删除</a>";
+                // string+= "<a class=\"layui-btn layui-btn-danger layui-btn-mini\" bannerId='"+data.id+"' href=\"javascript:;\" onclick=\"banner_del(this,'1')\">删除</a>";
                 // string+= "<a title=\"修改\" bannerId='"+data.id+"' href=\"javascript:;\" " +
                 //     "onclick=\"banner_edit("+data.id+","+remoteURL+data.path+","+data.url+")" +
                 //     "\" style=\"text-decoration:none\"><i class=\"layui-icon\">&#xe642;</i></a>";
@@ -76,16 +71,15 @@
            <!--<button class="layui-btn" id="add-btn" onclick="banner_add('添加轮播图','banner-add.html','600','500')">-->
                <!--<i class="layui-icon">&#xe608;</i>添加-->
            <!--</button><span class="x-right" style="line-height:40px"></span>-->
-            <button type="button" class="layui-btn" onclick="banner_add('添加首页广告图','./home-page-picture-add.html',500,500)">
+            <!-- <button type="button" class="layui-btn" onclick="banner_add('添加首页广告图','./home-page-picture-add.html',500,500)">
                 <i class="layui-icon">&#xe608;</i>添加首页广告图
-            </button>
+            </button> -->
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th>缩略图</th>
                         <th>链接地址</th>
-                        <th>是否为首页大图片</th>
-                        <th>操作</th>
+                        <th style='text-align:center'>操作</th>
                     </tr>
                 </thead>
                 <tbody id="x-img">
