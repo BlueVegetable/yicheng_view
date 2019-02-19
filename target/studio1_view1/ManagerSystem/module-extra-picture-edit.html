@@ -16,25 +16,10 @@
     <script src="./js/url.js" charset="utf-8"></script>
     <script src="./layui/layui.js" charset="utf-8"></script>
     <script>
-        $.ajax({
-            type: "POST",
-            url:  remoteURL+"/module/getAllModules.do",
-            data: {},
-            dataType: "json",
-            success: function(res){
-                $("#moduleID").html("");
-                $("#moduleID").append("<option value=''>请先选择模块</option>");
-                for (var i = 0; i < res.length; i++) {
-                    $("#moduleID").append("<option value='"+res[i].id+"'>"+res[i].moduleName+"</option>");
-                }
-                var moduleID = getParameter(window.location.href,"moduleID");
-                $("#moduleID").val(moduleID);
-                layui.use('form',function () {
-                    var form = layui.form;
-                    form.render();
-                });
-            }
-        });
+        window.onload=function() {
+            var moduleID = getParameter(window.location.href,"moduleID");
+            $("#moduleID").val(moduleID);
+        }
     </script>
 </head>
 <body>
@@ -61,15 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label" style="width:100px">所属模块</label>
-            <div class="layui-input-inline">
-                <select id="moduleID" name="moduleID" lay-verify="moduleID" lay-filter="module" lay-search="" style="z–index:10">
-                </select>
-            </div>
-        </div>
-    </div>
+    <input id="moduleID" type="hidden" name="moduleId" value="" />
     <div class="layui-form-item">
         <div class="layui-inline">
             <label class="layui-form-label" style="width:100px">链接地址</label>
@@ -110,7 +87,6 @@
             }
             ,done:function(res) {
                 layer.closeAll('loading'); //关闭loading
-                console.log(res);
                 $("#path").val(res.data.path);
                 document.getElementById("image").src=remoteImageURL+res.data.path;
                 layer.alert("上传成功");
@@ -135,7 +111,7 @@
         });
 
         form.on('submit(onup)', function(data) {
-
+            console.log(data.field);
             var token = sessionStorage.getItem('token');
             $.ajax({
                 type: "POST",
@@ -143,7 +119,6 @@
                 data: data.field,
                 dataType: "json",
                 success: function(res){
-                    console.log(res);
                     if(res) {
                         layer.alert("修改成功", {icon: 6},function () {
                             window.parent.window.init();
