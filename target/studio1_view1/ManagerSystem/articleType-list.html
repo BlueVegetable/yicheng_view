@@ -84,8 +84,7 @@
             ,cols: [[
                 // {field:'id', title: 'ID',align:"center", sort: true}
                 {field:'type', title: '类型名',align:"center"}
-                ,{field:'url', title: '跳转链接',align:"center"}
-                ,{field:'moduleID', title: '类型模块',templet:function (data) {
+                ,{field:'moduleID',align:'center', title: '类型模块',templet:function (data) {
                         var result = "";
                         $.ajax({
                             type: "POST",
